@@ -1,0 +1,26 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# ---- 实验数据：只留本地，绝不入库 ----
+# data/ 下每次实验导出的 result_<编号>.zip / csv 属于测量产物，
+# 体积大且随实验增长，不纳入版本管理。
+data/*.zip
+data/*.csv
+data/*.png
+data/result_*/
+
+# ---- Arduino 编译产物 ----
+solenoid/firmware/_build/
+*.hex
+*.elf
+
+# ---- 编辑器 / 系统 ----
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+*.log

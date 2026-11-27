@@ -1,0 +1,284 @@
+optris
+ CT 4ML
+TECHNICAL DATA
+High-speed pyrometer
+for temperature measurement 
+from 0 °C to 500 °C
+Features:
+•
+ 
+ 
+Miniaturized Infrared Thermometer with ultra-fast 
+exposure time of 90 µs
+•
+ 
+Small-sized head of 14 mm diameter and 28 mm 
+length fits everywhere and is usable up to 70 °C 
+without cooling
+•
+ 
+Short wavelengths range of 2.2 – 6 µm makes it 
+suitable for measurement of metals, metal oxides, 
+ceramics or materials with unknown or changing 
+emissivity
+Optris
+ 
+GmbH
+ 
+·
+ 
+Ferdinand
+-
+Buisson
+-
+Str
+.
+ 
+14
+ 
+·
+ 
+13127
+ 
+Berlin
+ 
+·
+ 
+Germany
+ 
+Phone
+:
+ 
++
+8
+6
+ 
+1
+3
+8
+1
+8
+6
+2
+4
+1
+3
+5
+ 
+·
+ 
+Fax
+:
+ 
++
+49
+ 
+30
+ 
+500
+ 
+197
+-
+10
+ 
+·
+ 
+E
+-
+mail
+:
+ 
+ 
+h
+u
+a
+n
+y
+i
+n
+g
+n
+i
+@
+1
+2
+6
+.
+c
+o
+m
+ 
+ 
+·
+ 
+ 
+www
+.
+optris
+.
+global
+Measurement specifications
+Temperature range
+ 
+(scalable via programming
+keys or software)
+  0 °C ... 500 °C
+Spectral range
+2.2 – 6 μm
+Optical resolution
+ 
+(90 % energy)
+10:1 
+System accuracy
+1)
+(at ambient temp. 23 ±5 °C)
+±(0.3 % of reading +2 °C)
+Repeatability
+(at ambient temp. 23 ± 5 °C)
+±(0.1 % of reading +1 °C)
+NETD
+2)
+120 mK
+Temperature coefficient
+3)
+±0.05 K/ K or ±0.03 %/ K
+Exposure time
+90 µs (90 %)
+Response time
+300 µs (90 %)
+Emissivity
+ 
+/
+ 
+Gain
+(adjustable via programming
+keys or software)
+0.100
+ 
+–
+ 
+1.100
+Transmissivity
+ 
+/
+ 
+Gain
+(adjustable via programming
+keys or software)
+0.100
+ 
+–
+ 
+1.100
+Signal processing (parameter 
+adjustable via programming keys 
+or software, respectively)
+Peak hold, valley hold, peak picker, average; 
+extended hold function with threshold and 
+hysteresis
+Software / App
+optris CompactPlus Connect / IRmobile
+1)
+ ε = 1, response time 1 s
+2)
+ At time constant 1 ms and T
+Obj 
+= 50 °C
+3)
+ For ambient temperatures >10 °C or whichever is greater
+General specifications
+Environmental rating
+IP 65 (NEMA-4)
+Ambient temperature
+0 °C ... 70 °C (sensing head)
+0 °C ... 70 °C (electronics)
+Storage temperature
+–
+ 
+40 °C ... 85 °C (sensing head)
+–
+ 
+40 °C ... 85 °C (electronics)
+Relative humidity
+10
+ 
+–
+ 
+95 %, non-condensing
+Vibration (sensor)
+IEC 60068-2-6 (sinus shaped)
+IEC 60068-2-64 (broadband noise)
+Shock (sensor)
+IEC 60068-2-27 (25 G and 50 G)
+Weight
+40 g (sensing head)
+420 g (electronics)
+Electrical specifications
+Outputs
+ 
+/
+ 
+analog (2x)
+0
+ 
+/
+ 
+4
+ 
+–
+ 
+20 mA, 0
+ 
+–
+ 
+5
+ 
+/
+ 
+10 V, thermocouple K, alarm
+Output
+ 
+/
+ 
+alarm
+24 V/ 50 mA (open collector)
+I/O Pins (3x)
+flexible programming as in- or output:
+external emissivity adjustment, ambient temperature 
+compensation, uncommitted value, trigger (reset of hold 
+functions), alarm output (open collector 24 V/ 50 mA)
+Relay (optional)
+2 x 60 V DC/ 42 V AC
+RMS
+; 0.4 A; optically isolated
+Digital interfaces
+built-in USB-interface
+Optional: RS232, RS485, Ethernet, Modbus RTU
+Output impedances
+mA max. 500 Ω 
+mV min. 100 kΩ load impedance
+ 
+thermocouple 20 Ω
+Cable length
+3 m, 8 m, 15 m
+Power Supply
+8
+ 
+–
+ 
+30 V DC / 5 V USB / max. 1.2 W
+
+optris
+ CT 4ML
+Specifications are subject to change without notice  ·  CT 4ML DS-EN2020-12-B
+Optics: CF
+D:S = 10:1
+Optics: SF 
+D:S = 10:1
+Focus @ 50  mm
+Optical specifications
+Dimensions 
+(in mm)
+Software / App
+Electronics
+Sensing head

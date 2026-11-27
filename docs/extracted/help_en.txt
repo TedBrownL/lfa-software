@@ -1,0 +1,2767 @@
+
+===== page 1 =====
+  
+Operator’s manual
+optris® CompactPlus Connect 
+Software for Infrared-Thermometers 
+
+===== page 2 =====
+-2 Table of contents  - 
+ 
+Table of contents 
+ 
+Table of contents ................................ ................................ .. 2 
+Welcome! ................................ ................................ .............. 4 
+Legal disclaimer ................................ ................................ ... 5 
+1. Basics ................................ ................................ ............. 6 
+1.1. Software installation ................................ .................. 6 
+1.2. Connection Sensor - Computer ................................ . 8 
+1.3. RS485/ RS422 ................................ ..........................  9 
+1.4. Easy Start-Up ................................ .........................  10 
+1.5. Basic Settings ................................ .........................  11 
+1.5.1. Language ................................ ....................... 11 
+1.5.2. Options ................................ ..........................  12 
+1.5.3. Diagram settings ................................ ............ 13 
+1.6. Digital Display ................................ .........................  14 
+1.7. Views ................................ ................................ ...... 16 
+1.8. External Displays ................................ .................... 18 
+1.9. Start measurement ................................ ................. 20 
+1.10. Scaling of the Temperature Axis .............................  22 
+1.11. Stop Measurement and Save Data .........................  23 
+1.12. Measurement Configuration ................................ .... 24 
+1.13. Opening of Files ................................ ..................... 25 
+2. CTratio ................................ ................................ .......... 27 
+2.1. Sensor Setup CTratio ................................ ............. 27 
+2.2. Sensor Setup CTratio – Signal Processing ............. 28 
+2.2.1. Ratio Mode - Standard Ratio ..........................  29 
+2.2.2. Ratio Mode - Smart Ratio ...............................  30 
+2.2.3. Post Processing ................................ ............. 40 
+2.3. Sensor Setup CTratio – Output ...............................  43 
+2.3.1. Output 1 and 2 ................................ ............... 43 
+2.3.2. Failsafe ................................ ..........................  46 
+2.4. Sensor Setup CTratio – I/O pins .............................  46 
+2.5. Sensor Setup CTratio – Display ..............................  50 
+2.5.1. Visual Alarms ................................ ................. 50 
+2.5.2. Temperature unit ................................ ............ 51 
+2.6. Sensor Setup CTratio – Advanced Settings ............. 52 
+2.6.1. RS485 Multidrop Address ...............................  53 
+2.6.2. Optical Set ................................ ...................... 53 
+2.6.3. Calibration ................................ ...................... 54 
+3. CT ................................ ................................ .................. 57 
+3.1. Sensor Setup CT – Signal Processing ..................... 57 
+3.1.1. Emissivity and Transmissivity .........................  58 
+3.1.2. Ambient Temperature Compensation ............. 59 
+3.1.3. Post Processing ................................ ............. 60 
+3.2. Sensor Setup CT – Output ................................ ...... 65 
+3.2.1. Output 1 and 2 ................................ ................ 66 
+3.2.2. Failsafe ................................ ...........................  68 
+3.2.3. Digital Output AL2 ................................ .......... 69 
+3.2.4. Relays ................................ ............................  70 
+3.3. I/O Pins ................................ ................................ ... 71 
+3.4. Display ................................ ................................ .... 74 
+3.4.1. Visual Alarms ................................ ................. 74 
+3.4.2. Temperature unit ................................ ............ 75 
+3.5. Sensor Setup CT – Advanced Settings ................... 76 
+3.5.1. Sensor Setup CT – Calibration ....................... 77 
+3.5.2. Manual Calibration ................................ .......... 78 
+3.5.3. 1 Point Calibration ................................ .......... 79 
+3.5.4. 2 Point Calibration ................................ .......... 80 
+3.5.5. USB Communication ................................ ...... 81 
+3.5.6. RS485-Multidrop address ...............................  81 
+3.5.7. Locking the programming keys ....................... 82 
+4. CSvision ................................ ................................ ........ 83 
+4.1. Setup CSvision................................ ........................ 83 
+4.2. Sensor Setup CSvision – Signal processing ............ 84 
+4.2.1. Ratio Mode - Standard Ratio ..........................  85 
+4.2.2. Ratio Mode - Smart Ratio ...............................  86 
+4.2.3. Post Processing ................................ ............. 95 
+4.3. Sensor Setup CSvision – Output .............................  99 
+4.3.1. Output 1 and 2 ................................ ................ 99 
+===== page 3 =====
+ Table of contents   3- 
+ 
+ 
+ 
+4.3.2. Failsafe ................................ ........................ 102 
+4.4. Sensor Setup CSvision – I/O-Pin ..........................  102 
+4.5. Sensor Setup CSvision – Display..........................  106 
+4.5.1. Visual Alarms ................................ ............... 106 
+4.5.2. Temperature unit ................................ .......... 107 
+4.6. Sensor Setup CSvision – Advanced Settings ........ 108 
+4.6.1. RS485 Base Address ................................ ... 109 
+4.6.2. Field Calibration ................................ ........... 110 
+4.6.3. Videosignal ................................ .................. 113 
+4.6.4. Automatic Snapshots ................................ ... 114 
+5. Special Feature................................ ...........................  115 
+5.1. Saving the Sensor Configuration ..........................  115 
+5.2. Smart Averaging ................................ ................... 116 
+5.3. Binary Chat Program ................................ ............ 117 
+5.3.1. Additional Features ................................ ....... 119 
+6. Menu Overview ................................ ...........................  120 
+6.1. Menu: File ................................ .............................  120 
+6.2. Menu: Measurement ................................ ............. 121 
+6.3. Menu: Device ................................ ........................ 122 
+6.4. Menu: Diagram................................ ...................... 123 
+6.5. Menu: View ................................ ...........................  124 
+6.6. Menu: Preferences ................................ ................ 126 
+6.7. Menu: Help ................................ ............................  126 
+6.8. Context Menu (right mouse button) ....................... 127 
+6.9. Context Menu [Sub menu: View] ...........................  128 
+6.10. Context-Menu [Sub menu: External Display] ......... 129 
+ 
+===== page 4 =====
+-4 Welcome!  - 
+ 
+Welcome! 
+Thank you for choosing an infrared thermometer and corresponding CompactPlus Connect software! 
+ 
+The sensor calculates the surface temperature based on the emitted infrared energy of objects [► Basics of 
+Infrared Thermometry]. 
+ 
+ 
+Main features of CompactPlus Connect 
+software: 
+▪ Temperature data analysis and 
+documentation 
+▪ Automatic process control 
+▪ Customer specific software 
+adjustments 
+▪ Complete parameterization of the 
+device 
+▪ Temperature display and recording 
+▪ Videosignal (only for CSvision) 
+ 
+ 
+ 
+ 
+ 
+ 
+
+===== page 5 =====
+ Legal disclaimer   5- 
+ 
+ 
+ 
+Legal disclaimer 
+All products are warranted against defective materials and workmanship 
+for a period of two (2) years from the delivery date of the original purchase, 
+provided such products have been under normal storage, use and service, 
+and in accordance with the instruction. This warranty expires in case of 
+inappropriate use of all delivered components. 
+All products not manufactured by us included in systems delivered by us 
+to the original purchaser carry the warranty, if any, of the particular supplier 
+only and we have no responsibility whatsoever for such products.  
+The manufacturer is not liable for an y use of the software CompactPlus 
+Connect including data recording. The manufacturer does not carry liability 
+for error -free operation of the software in any hardware and operating 
+system. 
+The warranty is not expressed for possible quality changes, errors when presenting the software, occurring 
+defects during operation or insufficiencies in certain applications. The user is liable for any defects or data 
+processing insufficiencies when in using the software. 
+The manufacturer has no other liability inside th e scope of supply other than mentioned above. The 
+manufacturer shall not be liable for any business loss or claim for compensation, loss of the computer software, 
+possible loss of data, additional costs for replacement software, claims of third parties or other occurring costs 
+or failures and deficits.  
+The software is protected by copyright and is not allowed to be changed or sold to third parties.  
+ 
+ 
+Note  
+Read the manual carefully before you start the device. The manufacturer reserves the right to change 
+the herein described specifications in case of technical advance of the product. 
+Optris GmbH 
+Ferdinand-Buisson-Str. 14 
+13127 Berlin 
+Germany 
+ 
+Phone: +49-30-500 197-0 
+Fax: +49-30-500 197-10 
+ 
+E-mail: info@optris.global 
+Internet: www.optris.global 
+===== page 6 =====
+-6 Basics  - 
+ 
+1. Basics 
+1.1. Software installation 
+Download the software from the Optris website. 
+Please start Setup.exe and follow the instructions 
+of the wizard until the installation is finished. 
+ 
+ 
+The installation wizard will place a launch icon on the desktop and in the start menu: 
+[Start]\Programs\CompactPlus Connect. 
+ 
+ 
+When using the Ethernet interface, the driver must be installed separately. This can be found in the download 
+package in the Driver folder (Name: Ethernet). 
+ 
+ 
+ 
+Note 
+The software can be downloaded via the Optris website under the following link: 
+https://www.optris.global/downloads-software  
+ 
+ 
+Minimum system requirements: 
+▪ Windows 10, 11 
+▪ USB interface 
+▪ Hard disc with at least 30 MByte free space 
+▪ At least 128 MByte RAM 
+===== page 7 =====
+ Basics   7- 
+ 
+ 
+ 
+IRmobile App 
+The pyrometer s have a direct connection to an Android smartphone or 
+tablet. All you have to do is download the IRmobile app for free in the Google 
+Play Store. This can also be done via the QR code. 
+ 
+ 
+ 
+ 
+ 
+Note 
+The IRmobile app works on most Android devices running 5.0 or higher with a micro USB or 
+USB-C port supporting USB-OTG (On The Go). 
+ 
+ 
+
+===== page 8 =====
+-8 Basics  - 
+ 
+1.2. Connection Sensor - Computer 
+If you connect your sensor to your PC and start the software, the following message will appear (if option Auto 
+Start is activated). ► Menu Preferences/ Options 
+ 
+Then please press the Scan button. All sensors found will be shown in a selection screen: 
+ 
+  
+ 
+ 
+ 
+After the selection of a sensor  you will get to the previous screen again. Here you will find now information 
+about the used virtual COM port (VCP), the serial number and the baud rate.  
+ 
+To finish please press OK. The window will be closed. 
+ 
+ 
+Example 1: A sensor was found. Press Select 
+to close the window. 
+ 
+Refresh starts a new search. 
+Example 2: Two sensors were found. Please 
+activate with the cursor the desired unit and after 
+that press the Select button to close the 
+window. 
+Refresh starts a new search. 
+===== page 9 =====
+ Basics   9- 
+ 
+ 
+ 
+If Auto start device is activated ► Menu Preferences/ Options the measurement starts and the 
+temperature values will be shown in the diagram. 
+ 
+After the sensor selection the status line (below the time axis) shows the following information:  
+ 
+COMxx: Opened  active COM port 
+CTRatio: Measuring  successful communication with the connected sensor 
+ 
+ 
+ 
+1.3. RS485/ RS422 
+If a RS485 interface is used please activate the RS422 mode. Therefore you have to call this function with the 
+programming keys on the sensor at first (menu item: multidrop address). You will need also the RS485 module 
+and the RS485-USB adapter [ACCTRS485USBK]. 
+ 
+ 
+
+===== page 10 =====
+-10 Basics  - 
+ 
+1.4. Easy Start-Up 
+If you restart the software and the last used sensor is 
+connected to the computer and the Auto Start option is 
+activated ► Preferences/ Options the connection will be 
+made automatically (without sensor selection window). 
+ 
+If this option is deactivated, you must select the 
+corresponding device in [Menu: Device\ Scan Device s] 
+and press the Select button. 
+ 
+The button  Disconnect in [Menu: Device]  breaks the 
+connection to the sensor and closes the COM port. 
+  
+ 
+  
+
+===== page 11 =====
+ Basics   11- 
+ 
+ 
+ 
+1.5. Basic Settings 
+1.5.1. Language 
+You can choose the desired language in the menu 
+[Menu: Preferences\ Language]. 
+ 
+  
+ 
+ 
+
+===== page 12 =====
+-12 Basics  - 
+ 
+1.5.2. Options 
+The menu item [Menu: Preferences\ Options] 
+allows the following settings: 
+ 
+  
+Auto Start If activated, after each program start the measurement will be started 
+automatically (if connected sensors have been found before). 
+Auto Apply If activated the changing of the settings will be directly effected 
+Fahrenheit If activated, the temperature is displayed in Fahrenheit. 
+ 
+ 
+The further options are described under ► Stop Measurement and Save Data. 
+ 
+
+===== page 13 =====
+ Basics   13- 
+ 
+ 
+ 
+1.5.3. Diagram settings 
+The menu item Settings [Menu: Diagram\ 
+Settings] enables the selection of the following 
+diagram options: 
+ 
+Digital Display Selection which signals 
+should be displayed as 
+digital display 
+Diagram Selection which signals 
+should be displayed as 
+graph 
+Pen Width Pen width of the 
+temperature graphs [1...5] 
+Color Color of the temperature 
+graph and digital displays 
+Y-axis Display of the graph on the 
+primary or secondary Y-
+axis 
+Fast burst Deactivation of all raws 
+ 
+ 
+
+===== page 14 =====
+-14 Basics  - 
+ 
+1.6. Digital Display 
+If the sensor is connected to your computer and you start the software, 
+the process temperature TProc will be shown as digital display. 
+You can add additional displays [Menu: Diagram\ Settings]. Dependent 
+on the sensor type the available signals may vary. 
+TProc includes the current post processing functions (average, peak hold, 
+etc.). 
+ 
+The once selected displays will also appear after a restart of the 
+software. The size can be changed if you put the cursor on the line 
+beneath the display and pull it down. The buttons of the tool bar will also 
+be moved (depending on the display size). 
+ 
+The colors of the different displays are equal to the colors selected under 
+[Menu: Diagram\ Settings] for the corresponding temperature graphs. 
+►Basic Settings 
+ 
+ 
+ 
+
+===== page 15 =====
+ Basics   15- 
+ 
+ 
+ 
+Overview of Digital Display 
+ 
+Notation  Description 
+TProc Process temperature With signal processing, including averaging 
+TRatio Ratio temperature Without signal processing, including averaging 
+T1 1-channel temperature Without signal processing, including averaging 
+T2 2-channel temperature Without signal processing, including averaging 
+TActRatio Actual temperature of ratio Without signal processing, without averaging 
+TTAct1 Actual temperature of channel 1 Without signal processing, without averaging 
+TTAct2 Actual temperature of channel 2 Without signal processing, without averaging 
+Attenuation Signal attenuation Signal attenuation 
+TDet / TInt Head temperature Temperature value of detector 
+TBox Box temperature Temperature of electronic box 
+TAvg Average temperatur Without signal processing, including averaging 
+ 
+ 
+ 
+Note 
+The available temperatures depend on the connected device type  
+ 
+ 
+===== page 16 =====
+-16 Basics  - 
+ 
+1.7. Views 
+The CompactPlus Connect allows the creation of free definable screens and views: 
+ 
+ 
+ 
+Note 
+The digital displays can be arranged optional on top or right side [Menu: View\ Temp. displays 
+top or Temp. displays right]. 
+
+===== page 17 =====
+ Basics   17- 
+ 
+ 
+ 
+You can show the digital displays also separate by hiding of 
+selected information (e.g. title bar, menu bar, etc.) in any size 
+► Digital Displays and, if desired, also always on top of your 
+PC screen [Menu: View\ Always on top]. 
+ 
+ 
+
+===== page 18 =====
+-18 Basics  - 
+ 
+1.8. External Displays 
+By double click on one of the digital displays [Menu: View\ External Display] 
+you can start an external display for the respective signal. This display will 
+appear initially in the same color than the respective display in the software. By 
+drag and drop these external displays can be placed at any desired location on 
+the PC screen (the position of the according software display will not change). 
+For an easy positioning a mark will appear on the left of the display if crossed 
+with the cursor: 
+ 
+ 
+ 
+Note 
+To distinguish between several displays the name of the software/ instance (for multiple software 
+calls) as well as the signal name will be shown shortly. 
+ 
+There are different options available for the design of th e external 
+displays which can be called with the right mouse button: 
+ 
+  
+Border Presenting the display with a border – in this 
+mode the size of the display can be changed. 
+ 
+
+===== page 19 =====
+ Basics   19- 
+ 
+ 
+ 
+Transparent Transparent presenting – useful for a 
+positioning of the display in front of pictures 
+or wallpapers.  
+Change color For changing the display color. 
+ 
+Use contrast color Dependent on the used background the 
+presenting of the display figures with 
+contrast color (black edging) can be useful.  
+Remove Display Closes the associated external display.  
+ 
+ 
+
+===== page 20 =====
+-20 Basics  - 
+ 
+1.9. Start measurement 
+To start a measurement, please press the Start button in the tool bar [Menu: Measurement\ Start]. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Control elements of the time axis: 
+ 
+1 Scroll bar 
+2 Zoom in (increase) 
+3 Zoom out (decrease) 
+4 Whole range 
+5 H: Hold/ C: Continue 
+ 
+ 
+ 
+ 
+ 
+ 
+1 2 3 4 5 
+===== page 21 =====
+ Basics   21- 
+ 
+ 
+ 
+Any activation of a control element of the time axis or of the Pause button 
+will stop the further actualization of the measurement graph. The 
+measurement itself continues in the background. To return to the current 
+measurement graph please press the Pause button again [Menu: 
+Measurement\ Pause] or C. 
+ 
+ 
+ 
+ 
+During the stopped status any parts of the diagram can be selected with the Time scroll bar. With the zoom 
+in-button  +  these parts can be stretched (enlarged) and with the zoom out-button  –  clinched (minimized). 
+ 
+
+===== page 22 =====
+-22 Basics  - 
+ 
+1.10. Scaling of the Temperature Axis 
+With global scaling the temperature range of the 
+diagram will automatically be adapted to the 
+respective peak values. The range will remain as 
+set during the whole measurement. 
+ 
+With local scaling  the temperature range of the 
+diagram will be adapted dynamically to the 
+respective peak values. After the respective peak 
+has left the diagram in the further process of the 
+measurement, the range will be readapted. This 
+option enables an optimum display o f the 
+temperature graph. 
+ 
+A manual scaling can be done at any time using 
+the control elements of the temperature axis. 
+Control elements of the temperature 
+axis: 
+ 
+1 Global auto scaling 
+2 Local auto scaling 
+3 Scroll bar 
+4 Zoom in (increase) 
+5 Zoom out (decrease) 
+6 Whole range 
+ 
+ 
+ 
+ 
+Activation of the desired option: 
+Control elements (temperature axis) 
+ 
+1 
+2 
+3 
+4 
+5 
+6 
+===== page 23 =====
+ Basics   23- 
+ 
+ 
+ 
+1.11. Stop Measurement and Save Data 
+To stop the current measurement please press the Stop button 
+[Menu: Measurement\ Stop]. 
+The Save button [Menu: File\ Save as] opens an explorer window 
+to select destination and file name [file type: *.dat].  
+ 
+ 
+ 
+
+===== page 24 =====
+-24 Basics  - 
+ 
+1.12. Measurement Configuration 
+With the menu item [Menu: Measurement \ Settings] you can define the 
+following parameter for the measurement: 
+ 
+ 
+Max. data count Limitation of the maximum 
+number of data values – when 
+achieved the measurement will 
+be stopped. 
+ 
+Stop/ Overwrite If the maximum number of data 
+values is achieved, 
+at Stop the current measurement 
+will be terminated automatically/ 
+at Overwrite the measurement 
+will continue and the first values 
+will be overwritten (principle of 
+ring memory) 
+Memory Memory, calculated from the 
+max. data count value 
+Recording interval Time between single data 
+[1ms...10s] 
+
+===== page 25 =====
+ Basics   25- 
+ 
+ 
+ 
+Recording time Maximum time of measurement, calculated from Max data count and Recording 
+interval 
+ 
+ 
+Note 
+A change of the parameter Max data count will have influence on the Memory and Recording 
+time. 
+A change of the parameter Recording interval will have influence on the Recording time only. 
+ 
+ 
+Communication mode At Auto setting (recommended) the connected sensor works in Realtime 
+mode (=Burst mode: Sensor is sending data continuously) if the recording 
+interval is <200 ms. If the recording interval is >200 ms the sensor works in 
+the Standard mode (= Polling mode: Temperature values will be polled by 
+the software). 
+ 
+ 
+1.13. Opening of Files 
+To open a saved file please press the button Open [Menu: File\ Open]. 
+You can select the desired file in an explorer window which will be opened 
+[file type: *.dat]. 
+ 
+ 
+ 
+
+===== page 26 =====
+-26 Basics  - 
+ 
+ 
+Note 
+The temperature files can also be opened and edited with any text editor or with Microsoft Excel.  
+If you open a file with a spreadsheet program you will find beside the relative time (starting with 000:00:00 – 
+column A) also the absolute time for each measurement value (column N).  
+On video devices and if the function “Automatic Snapshots” is activated you will find further information to the 
+recorded snapshots in the columns O and P: 
+ 
+ 
+ 
+
+===== page 27 =====
+ CTratio   27- 
+ 
+ 
+ 
+2. CTratio 
+2.1. Sensor Setup CTratio 
+The button Setup [Menu: Device\ Device Setup] opens a window for the setting of all sensor parameters. 
+The dialog window is separated into 4 categories: 
+▪ Signal processing Setting of Emissivity/ Slope and Post processing 
+▪ Output Setting of Output 1 and Output 2 
+▪ I/O Pins Setting the In- and Outputs 
+▪ Display Display main value and Backlight/ Alarm setting 
+▪ Advanced settings RS485 Multidrop address, Optical Set, Calibration 
+ 
+ 
+CTratio 
+
+===== page 28 =====
+-28 CTratio  - 
+ 
+2.2. Sensor Setup CTratio – Signal Processing 
+In this category you can adjust the parameters Emissivity, Slope, Attenuation and select the functions and 
+define the parameters for Post processing. Furthermore, the desired ratio mode can be selected here. The 
+Standard Ratio mode is activated as default setting. 
+ 
+ 
+
+===== page 29 =====
+ CTratio   29- 
+ 
+ 
+ 
+2.2.1. Ratio Mode - Standard Ratio 
+Emissivity/ Slope/ Attenuation 
+The Slope is the quotient of the emissivity’s 
+of both of the overlapping wavelengths and 
+therewith the deciding parameter for 
+measurements in 2-color-mode. 
+ 
+The Emissivity ( – Epsilon) is a material 
+constant factor to descri be the ability of a 
+body to emit infrared energy. The emissivity 
+only affects measurements in the 1 -color-
+mode. 
+ 
+The function Calculate Slope/Emissivity  
+allows the determination of an unknown 
+emissivity and slope at a known process 
+temperature. 
+ 
+ 
+ 
+ 
+Attenuation: The temperature display is fixed if the attenuation exceeds the limit specified here. You can 
+decide whether the last valid value  should be kept or a fixed value  entered. This can be selected for 
+maximum and minimum attenuation.  
+ 
+ 
+
+===== page 30 =====
+-30 CTratio  - 
+ 
+2.2.2. Ratio Mode - Smart Ratio 
+While the standard mode requires a 
+constant emissivity ratio/slope, the 
+Smart Ratio measurement allows a 
+data set of different slopes to be 
+recorded and applied for temperature 
+calculation. This is required, for 
+example, if the degree of contamination 
+of the protective window changes 
+during the process and the ratio 
+temperature is no longer correct. This 
+cannot be described with a constant 
+slope.  
+ 
+A requirement for the measurement is that the object temperature must be known.  
+ 
+Note: Before the first use a data record must be recorded 
+ 
+In the Teach-in function, the data records are recorded. 
+ 
+The Smart Ratio mode can be activated or deactivated with the On/Off buttons. 
+ 
+ 
+ 
+ 
+ 
+ 
+
+===== page 31 =====
+ CTratio   31- 
+ 
+ 
+ 
+Teach-In 
+ 
+The process temperature must be known for the teach-in function. This temperature can be set using two 
+variants: 
+• Variant 1: Via a fixed value 
+Here the known process temperature is entered 
+manually. 
+ 
+• Variant 2: Via Uncomitted value 
+The input is done via an analog signal, for example 
+an external sensor.  
+ 
+Procedure 
+ 
+Hold the dirty window in front of the sensor. 
+The Measure Now button (F12)  can now be used to 
+record measuring points. The current transmission and 
+slope are entered into the table. Alternatively, the F12 
+button can be pressed.  
+ 
+ 
+Note 
+When recording different measuring points, the current process temperature must always be taken 
+into account. At least two measuring points with different degrees of contamination. 
+Recommendation: The more measuring points the better 
+ 
+
+===== page 32 =====
+-32 CTratio  - 
+ 
+ 
+ 
+Smart Ratio example with 11 measuring points 
+ 
+ 
+ 
+ 
+ 
+ 
+
+===== page 33 =====
+ CTratio   33- 
+ 
+ 
+ 
+The middle figure shows the transmission of diode 
+1 relative to the transmission of diode 2 
+ 
+The blue points are the recorded measuring points. 
+ 
+Green curve: Regression curve (polynomial) for 
+calculating the values be tween the measuring 
+points. 
+ 
+ 
+ 
+ 
+Note 
+The Smart Ratio method can only work if there is a monotonically increasing function progression. If 
+this is not the case, the Smart Ratio method cannot be used. If this is not the case, repeat the 
+measurement and check the measurement for measurement errors. 
+ 
+
+===== page 34 =====
+-34 CTratio  - 
+ 
+The right figure shows the transmission ratio (slope) 
+relative to the transmission of diode 2. 
+ 
+The blue points are the recorded measuring points. 
+ 
+The violet horizontal line is the average slope 
+calculated from the measured values. 
+ 
+The red curve is an estimate of the quotient 
+temperature error (in Kelvin) when using the 
+average slope without the Smart Ratio method. 
+ 
+Green curve: Regression curve (polynomial) for 
+calculating the values between the measurement 
+points. 
+ 
+ 
+To write the created curves to the device, the Apply Smart Ratio with 
+new data option must be selected in the menu under Apply Correction 
+Method. The created regression curve is now written to the device. A 
+message window appears indicating that the table is being saved to the 
+device. The Smart Ratio mode is now automatically activated. 
+ 
+ 
+
+===== page 35 =====
+ CTratio   35- 
+ 
+ 
+ 
+ 
+ 
+Smart ratio mode is now activated. Further data points can no longer be recorded in this mode. To add more 
+data points, press the Continue Data Acquisition button (Smart Ratio mode is deactivated again). 
+ 
+After successful setting you can close the window with the OK button. 
+ 
+ 
+ 
+
+===== page 36 =====
+-36 CTratio  - 
+ 
+ 
+ 
+ 
+ 
+ 
+Activation of the Smart Ratio function is indicated by a green illuminated On button. In addition, there is an 
+icon called SRM, which is framed in green when activated. 
+ 
+To deactivate the Smart Ratio function, you 
+can either click on the icon or on the green on 
+button. 
+ 
+ 
+ 
+
+===== page 37 =====
+ CTratio   37- 
+ 
+ 
+ 
+Further Settings 
+ 
+Further settings can be made in the menu under 
+File. 
+ 
+Save measurement pionts to CSV file : The 
+created data is stored on a hard disk. 
+ 
+Save regression data to device: The created data 
+is stored on the device without activating or applying 
+the Smart Ratio method. 
+ 
+ 
+Save regression data to .dat file: Here the data is stored on a hard disk for external data analysis.  
+ 
+Load measurement points from CSV file : If data sets alrea dy exist, the values can be read in and loaded 
+into the table. 
+ 
+Load regression data from device: To view the currently used regression curve. 
+ 
+Load regression data from file: The regression data is loaded from an existing file. 
+ 
+Load regression data from file and save to device: Here the regression data is loaded from an existing file 
+and saved directly to the device. 
+
+===== page 38 =====
+-38 CTratio  - 
+ 
+The following settings can be made in the menu under Data 
+Acquisition. 
+ 
+Measure Now : A single measuring point is created and 
+written to the table. 
+ 
+Start periodic measurement: A predefined interval can be 
+entered, in which the measuring points will be recorded 
+automatically.  
+ 
+Stop periodic measurement: The recording of new measuring points is stopped. 
+ 
+Averaging count: Signal averaging during transmission measurement (response time is extended).  
+ 
+Delete all measurement points: All measuring points in the table are deleted (not from the device). 
+ 
+ 
+Note 
+To delete individual measuring points, you must mark them in the table and remove them with the 
+delete key. 
+ 
+The following settings can be made in the menu under Data 
+Analysis. 
+ 
+Polynom of order: The polynomial order is specified here. 
+The factory setting is Auto and is determined automatically. 
+Alternatively, it can be changed manually if required.  
+ 
+
+===== page 39 =====
+ CTratio   39- 
+ 
+ 
+ 
+Regression accuracy : Characteristic value to evaluate the description of the measured values by the 
+polynomial. Larger values are better. A value of 1 means perfect agreement. The regression accuracy is 
+calculated automatically. 
+ 
+Average slope: The mean value of all slopes is calculated (violet straight line in the right diagram). The default 
+setting is Auto. Alternatively it can be set manually. Allows to manually move the average slope (display 
+optimization). 
+ 
+ 
+The following settings can be made in the menu under Apply. 
+ 
+Apply Smart Ratio with new data : The created regression curve 
+is written to the device and the Smart Ratio mode is activated. A 
+message window appears indicating that the table is being saved 
+to the device. 
+ 
+ 
+Apply Smart Ratio with old data: Regression curve already stored in the device is retained and Smart Ratio 
+mode is activated. 
+ 
+Apply average slope: Set average slope and activate standard ratio mode. 
+ 
+Apply old slope: Restore the slope value before opening the Smart Ratio configuration. 
+ 
+ 
+ 
+
+===== page 40 =====
+-40 CTratio  - 
+ 
+2.2.3. Post Processing 
+In the category Post Processing you can select the Source and make following settings: 
+▪ Averaging (Averaging time, average mode, smart threshold) 
+▪ Hold mode (Mode: Off, Peak Hold, Valley Hold, Advanced Peak Hold, Advanced Valley Hold) 
+ 
+You will find the description of the single functions on 
+the next page. 
+ 
+Smart Averaging 
+If activated, a dynamic average adaptation at high 
+signal edges is active. In addition you can enter the 
+minimum temperature difference ( Smart Averaging 
+Hysteresis) to trigger this function. 
+ 
+
+===== page 41 =====
+ CTratio   41- 
+ 
+ 
+ 
+Averaging In this mode an arithmetic algorithm will be performed to smoothen the 
+signal. The Averaging Time is the time constant. This function can be 
+combined with all other post processing functions. The minimum adjustable 
+average time is 0,001 s. 
+Peak hold In this mode the sensor is waiting for descending signals. If the signal 
+descends the algorithm maintains the previous signal peak for the specified 
+Hold time. 
+The minimum adjustable hold time is 0,001 s. 
+After the hold time the signal will drop down to the second highest value or 
+will descend by 1/8 of the difference between the previous peak and the 
+minimum value during the hold time. This value will be held again for the 
+specified time. After this the si gnal will drop down with slow time constant 
+and will follow the current process temperature.  
+Therefore, if periodic events will be measured (bottles on a conveyor e.g.) 
+this peak hold function avoids a drop down of the signal to the conveyor 
+temperature in-between 2 events. 
+Valley hold In this mode the sensor waits for ascending signals. If the signal ascends 
+the algorithm maintains the previous signal valley for the specified Hold 
+time. The definition of the algorithm is according to the peak hold algorithm 
+(inverted). 
+Advanced Peak hold In this mode the sensor waits for local peak values. Peak values which are 
+lower than their predecessors will only be taken over if the temperature has 
+fallen below the Threshold value beforehand. If Hysteresis is activated a 
+===== page 42 =====
+-42 CTratio  - 
+ 
+peak in addition must decrease  by the value of the hysteresis before the 
+algorithm takes it as a new peak value. 
+Advanced Valley hold This mode is the inverted function of Advanced Peak hold. The sensor 
+waits for local minima. Minimum values which are higher than their 
+predecessors will only be taken over if the temperature has exceeded the 
+Threshold value beforehand. If Hysteresis is activated a minima in 
+addition must increase by the value of the hysteresis before the algorithm 
+takes it as a new minimum value. 
+Smart Averaging If activated, a dynamic average adaptation at high signal edges is active. 
+Off If Off is activated, no post processing will happen. 
+ 
+ 
+ 
+===== page 43 =====
+ CTratio   43- 
+ 
+ 
+ 
+2.3. Sensor Setup CTratio – Output 
+2.3.1. Output 1 and 2 
+The device has two outputs (OUT 1, OUT 2) which can be configured 
+as desired. The following options are available under Mode: 
+• Off 
+• Analog 
+• Alarm  
+ 
+When Analog is activated, the following signal sources can be selected in the Source field: 
+▪ TProc Process temperature 
+ 
+▪ TRatio Ratio temperature 
+▪ T1 1 channel temperature 
+▪ T2 2 channel temperature 
+▪ Attenuation Signal attenuation in % 
+▪ TDet Temperature of detector 
+▪ TBox Box temperature 
+ 
+
+===== page 44 =====
+-44 CTratio  - 
+ 
+The desired temperature measuring range of 
+the sensor can now be set. The range limits can 
+be changed by entering them in the 
+corresponding fields. The source can be 
+selected between TProc, TRatio, T1, T2, 
+Attenuation, TDet or TBox. 
+▪ TMin: lower temperature range limit 
+▪ TMax: upper temperature range limit 
+▪ Min [mA]: lower limit mA output 
+▪ Max [mA]: upper limit mA output 
+ 
+ 
+ 
+
+===== page 45 =====
+ CTratio   45- 
+ 
+ 
+ 
+Alternatively, outputs 1 and 2 can be used as alarm 
+outputs. To do this, select the Alarm setting.  
+As source you can choose between TProc, TRatio, T1, 
+T2, Attenuation, TDet or TBox. 
+ 
+Under Threshold the threshold value for triggering 
+the alarm is defined. 
+ 
+Hysteresis: Setting the minimum hysteresis 
+ 
+Alarm Off [mA/mV]: Value if no alarm 
+ 
+Alarm On [mA/mV]: Value on alarm 
+ 
+Selecting Open/Closed under Mode defines the 
+output as High or Low alarm. 
+ 
+ 
+Difference M ode: When activated, no absolute value is used for the alarm threshold, but the difference 
+between process temperature and ambient temperature (TProc-TUmg). 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+===== page 46 =====
+-46 CTratio  - 
+ 
+2.3.2. Failsafe 
+The pyrometer has a failsafe function that can be used in analog 
+mode. 
+The range can be configured as desired. The settings for fail-safe 
+operation allow a defined level to be output at the analog output 
+depending on specified temperature limits. 
+Thus, a possible cable defect can be detected quickly. 
+ 
+ 
+2.4. Sensor Setup CTratio – I/O pins 
+The CTratio has three I/O pins which can be programmed as in - or outputs using the software. The following 
+options are available: 
+Function I/O pin acts as Description 
+Alarm output (digital) Open collector output/ definition as HIGH- or LOW alarm via norm. open/ 
+norm. close options in software dialog. 
+Valid Low input (digital) The output follows the process temperature as long as there is a Low level 
+at the I/O pin. After discontinuation of the Low level the last value will be 
+held. 
+Valid High input (digital) The output follows the process temperature as long as there is a High 
+level at the I/O pin. After discontinuation of the High level the last value will 
+be held. 
+Hold Low-High input (digital) The last value will be held if there is a signal with a rising edge on the I/O 
+pin. 
+
+===== page 47 =====
+ CTratio   47- 
+ 
+ 
+ 
+Hold High-Low input (digital) The last value will be held if there is a signal with a falling edge on the I/O 
+pin 
+Hold Reset Low input (digital) Reset of a hold function on a Low level at the I/O pin 
+Hold Reset High input (digital) Reset of a hold function on a High level at the I/O pin 
+Slope external input (analog) External adjustment of the slope value using an analog voltage (0-10 V) 
+Emissivity external input (analog) External adjustment of the emissivity value using an analog voltage (0-10 
+V) 
+Uncommitted Value input (analog) Display of a freely scalable value 
+Laser on Low input (digital) Switch on laser (Low signal) 
+Laser on High input (digital) Switch on laser (High signal) 
+ 
+Low-/High-level: via software
+===== page 48 =====
+-48 CTratio  - 
+ 
+If you select the function Alarm the following signal sources can be 
+selected: 
+▪ TProcess Process temperature 
+▪ TRatio Ratio temperature 
+▪ T1 1 channel temperature 
+▪ T2 2 channel temperature 
+▪ Attenuation Signal attenuation in % 
+▪ TDet Detector temperature 
+▪ TBox Box temperature  
+ 
+The definition as Low or High alarm can be done by switching 
+between Normally: open and Normally: closed.  
+ 
+If you select the function Slope external or Emissivity external the 
+I/O pin is set as analog input. The scaling can be done using the 
+parameter fields P1/P2 and Slope P1/P2 / Epsilon P1/P2. 
+ 
+
+===== page 49 =====
+ CTratio   49- 
+ 
+ 
+ 
+If you select the function Hold Reset Low  or Hold Reset High  the 
+I/O-Pin is set as digital input. An activa ted hold function (MAX, MIN, 
+advanced MAX, advanced MIN) will be reset if a low or high level is 
+at the I/O pin. 
+ 
+ 
+
+===== page 50 =====
+-50 CTratio  - 
+ 
+2.5. Sensor Setup CTratio – Display 
+In this tab you can make settings for the display and the backlight (=visual alarms). Furthermore, the 
+temperature unit can be selected here. 
+ 
+2.5.1. Visual Alarms 
+Independent of the selected signal for the analog output, a signal from the following list can be selected under 
+General/ Main display source, which is shown in the digital display of the electronics: 
+TProc Process temperature 
+TRatio Ratio temperature 
+T1 Temperature value 1-color-mode 
+T2 Temperature value 2-color-mode 
+Attenuation Signal attenuation in % 
+TDet Temperature of the detector 
+TBox Temperature of the electronics 
+ 
+For the visual alarm areas up to eight alarm limits can be assigned to a signal. The selected signal can be 
+selected under Source independent of the value shown in the display and independent of the analog output.  
+===== page 51 =====
+ CTratio   51- 
+ 
+ 
+ 
+ 
+ 
+2.5.2. Temperature unit 
+The temperature unit can be changed between °C and °F under Preferences/ Options. 
+
+===== page 52 =====
+-52 CTratio  - 
+ 
+2.6. Sensor Setup CTratio – Advanced Settings 
+In the category Advanced Settings the following parameter can be adjusted: 
+▪ RS485 - Multidrop address 
+▪ Optical Set 
+▪ Calibration 
+ 
+  
+
+===== page 53 =====
+ CTratio   53- 
+ 
+ 
+ 
+2.6.1. RS485 Multidrop Address 
+In combination with a RS485 interface you can build a 
+network of several CTratio sensors (max. 32 sensors). 
+For the digital communication each sensor must have its own 
+address which you can enter in the input field Multidrop 
+address. 
+► RS485/ RS422  
+ 
+ 
+2.6.2. Optical Set 
+If replacement fibers are used, the correct number must be 
+entered for exact allocation. Each fiber has a unique number. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+
+===== page 54 =====
+-54 CTratio  - 
+ 
+2.6.3. Calibration 
+In the Advanced Settings tab, three different modes can be 
+selected to perform a calibration of the device: 
+▪ Manual 
+▪ 1 Point (Calibration) 
+▪ 2 Point (Calibration) 
+ 
+These amplification factors can be entered for the Ratio, T1 
+and T2 temperature. 
+ 
+Manual Calibration 
+For certain applications or under certain circumstances a 
+temperature offset or a change of the gain for the temperature 
+curve may be useful. 
+ 
+The factory default settings for Offset and Gain are: 
+▪ Offset: 0,0 K 
+▪ Gain: 1,000 
+ 
+  
+A changed Offset causes a parallel shifting of the temperature curve and therewith it has a linear effect on 
+the temperature reading (change constant independent on process temperature). A change of the Gain will 
+have a non-linear effect on the temperature reading (change depends on process temperature). 
+ 
+ 
+
+===== page 55 =====
+ CTratio   55- 
+ 
+ 
+ 
+1 Point Calibration 
+In this mode, a 1-point calibration can be made for the device. To do this, select under Mode 1 Point 
+(Calibration) and enter the actual temperature and the set temperature. An offset calculation takes place 
+and is displayed. 
+  
+
+===== page 56 =====
+-56 CTratio  - 
+ 
+2 Point Calibration 
+In this mode, a 2 point calibration can be made. To do this, select under Mode 2 Point (Calibration) and 
+enter the actual temperature and the set temperature for two different points. An offset and gain is then 
+calculated. 
+ 
+ 
+  
+
+===== page 57 =====
+ CT   57- 
+ 
+ 
+ 
+3. CT 
+3.1. Sensor Setup CT – Signal Processing 
+The button Setup [Menu: Device\ Device Setup] opens a window for the setting of all sensor parameters. 
+The dialog window is separated into 5 categories: 
+▪ Signal processing Setting of Emissivity/ Transmission and Post processing 
+▪ Output Setting of Output 1 and Output 2 
+▪ I/O Pins Setting the In- and Outputs 
+▪ Display Display main value and Backlight/ Alarm setting 
+▪ Advanced settings Calibration, USB connection, RS485 Multidrop address 
+ 
+ 
+CT 
+ 
+ 
+
+===== page 58 =====
+-58 CT  - 
+ 
+3.1.1. Emissivity and Transmissivity 
+Under Emissivity/Transmission in the Signal Processing tab, you can set the two parameters: 
+Emissivity: The Emissivity ( – Epsilon) is a material constant factor to describe the ability of 
+a body to emit infrared energy. The emissivity only affects measurements in the 1 -
+color-mode. 
+Transmission: In the input field Transmission you have to enter the transmission of optional  
+optical components like an additional lens (e.g. CF optics ACCTCF) or a protective 
+window (e.g. ACCTPW). 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+===== page 59 =====
+ CT   59- 
+ 
+ 
+ 
+3.1.2. Ambient Temperature Compensation 
+In dependence on the emissivity value of the object a certain amount of ambient radiation will be reflected from 
+the object surface. To compensate this impact, the software provides the feature Ambient control: 
+▪ Internal (Head): The ambient temperature will be taken from the head-internal Pt1000 probe 
+(factory default setting). 
+▪ Fixed value: A fixed value can be entered in the edit box Fixed value (if the ambient 
+radiation is constant). 
+ 
+ 
+ 
+ 
+Note 
+Especially if there is a big difference between the ambient temperature at the process and head 
+temperature the use of Ambient control with Fixed value or via the I/O pins (mode: External Ambient 
+Compensation).is recommended. 
+
+===== page 60 =====
+-60 CT  - 
+ 
+3.1.3. Post Processing 
+Under Post Processing  you can set the 
+averaging and hold mode. 
+Averaging: In this mode an arithmetic algorithm 
+will be performed to smoothen the signal. The 
+Averaging Time is the time constant. This function 
+can be combined with all other post processing 
+functions.  
+The minimum adjustable average time is for the CT 
+4M model 1ms (0,001s). On this model values 
+below 0,1 s can be increased/ decreased only by 
+values of the power series of 2 (0,002, 0,004, 
+0,008, 0,016, 0,032, ...). 
+Under the A veraging Mode  you can choose 
+between Normal and Adaptive. With Adaptive, a 
+dynamic adjustmen t of the averaging process is 
+performed for steep signal edges ( Smart 
+Averaging). 
+ 
+The following post-processing functions are available: 
+ 
+Off If Off is activated, no post processing will happen (TProc = TAvg). 
+Averaging In this mode an arithmetic algorithm will be performed to smoothen the 
+signal. The Avg. time is the time constant. This function can be combined 
+with all other post processing functions. The minimum adjustable average 
+
+===== page 61 =====
+ CT   61- 
+ 
+ 
+ 
+time is 0,1s; on the models 1M, 2M and 3M 1ms (0,001s). On these models 
+values below 0,1s can be increased/ decreased only by values of the power 
+series of 2 (0,002, 0,004, 0,008, 0,016, 0,032, ...). 
+Peak hold In this mode the sensor is waiting for descending signals. If the signal 
+descends the algorithm maintains the previous signal peak for the 
+specified Hold time. 
+The minimum adjustable hold time is 1 ms (0,001 s). 
+After the hold time the signal will drop down to the second highest value 
+or will descend by 1/8 of the difference between the previous peak and 
+the minimum value during the hold time. This value will be held again for 
+the specified time. After this the signal will drop down with slow time 
+constant and will follow the current process temperature. ► Signal 
+Graphs 
+Therefore, if periodic events will be measured (bottles on a conveyor e.g.) 
+this peak hold function avoids a drop down of the signal to the conveyor 
+temperature in-between 2 events. 
+Valley hold In this mode the sensor waits for ascending signals. If the signal ascends 
+the algorithm maintains the previous signal valley for the specified Hold 
+time. The definition of the algorithm is according to the peak hold algorithm 
+(inverted). 
+Advanced Peak hold In this mode the sensor waits for local peak values. Peak values which are 
+lower than their predecessors will only be taken over if the temperature has 
+fallen below the Threshold value beforehand. If Hysteresis is activated a 
+===== page 62 =====
+-62 CT  - 
+ 
+peak in addition must decrease  by the value of the hysteresis before the 
+algorithm takes it as a new peak value. 
+Advanced Valley hold This mode is the inverted function of Advanced Peak hold. The sensor 
+waits for local minima. Minimum values which are higher than their 
+predecessors will only be taken over if the temperature has exceeded the 
+Threshold value beforehand. If Hysteresis is activated a minima in 
+addition must increase by the value of the hysteresis before the algorithm 
+takes it as a new minimum value. 
+Smart Averaging If activated, a dynamic average adaptation at high signal edges is active. 
+ 
+ 
+Peak picking function 
+ 
+For a detection of fast hotspots (detection time 90 µs) the averaging time must be set to 0.0 s. 
+ 
+ 
+ 
+Note 
+You can display the process temperature TProc (with post processing) and also the current average 
+temperature TAvg (without any post processing) in the diagram. In this way the result and functionality 
+of the selected post processing features can easily be traced and controlled. 
+ 
+ 
+ 
+ 
+ 
+ 
+===== page 63 =====
+ CT   63- 
+ 
+ 
+ 
+Signal Graphs 
+ 
+ 
+▬ TProc with Peak Hold (Hold time = 1s) 
+▬ TAvg without post processing 
+
+===== page 64 =====
+-64 CT  - 
+ 
+ 
+▬ TProc with Advanced peak hold (Threshold = 80 °C/ Hysteresis = 20 °C) 
+▬ TAvg without post processing 
+ 
+ 
+  
+
+===== page 65 =====
+ CT   65- 
+ 
+ 
+ 
+3.2. Sensor Setup CT – Output 
+In the Output tab, you can set the Output 1 and 2 and the Digital Output AL2. If the optional Relay interface 
+is used, it can also be configured here. 
+ 
+ 
+
+===== page 66 =====
+-66 CT  - 
+ 
+3.2.1. Output 1 and 2 
+The device has two outputs (OUT -1, OUT -2) which 
+can be configured as desired. Th e following options 
+are available for selection: 
+• Off 
+• Analog mA 
+• Analog mV 
+• Alarm mA 
+• Alarm mV 
+• TCK  
+ 
+When using the analog mA or mV output, either TProc, 
+TInt or TBox can be selected as source. The desired 
+temperature measurement range of the sensor can 
+now be set. The range limits can be changed by 
+entering the values in the corresponding fields. 
+▪ TMin: lower temperature range limit 
+▪ TMax: upper temperature range limit 
+▪ Min [mA/mV]: lower limit mA/mV output 
+▪ Max [mA/mV]: upper limit mA/mV output 
+ 
+
+===== page 67 =====
+ CT   67- 
+ 
+ 
+ 
+Alternatively, outputs 1 and 2 can be used as alarm 
+outputs. To do this, select the Alarm mA or Alarm mV 
+setting.  
+As source you can choose between TProc, TInt or TBox. 
+ 
+Under Threshold the threshold value for triggering 
+the alarm is defined. 
+ 
+Hysteresis: Setting the minimum hysteresis 
+ 
+Alarm Off [mA/mV]: Value if no alarm 
+ 
+Alarm On [mA/mV]: Value if alarm 
+ 
+Selecting Open/Closed under Mode defines the 
+output as High or Low alarm.  
+ 
+Difference mode: When activated, no absolute value is used for the alarm threshold, but the difference 
+between process temperature and ambient temperature (TProc-TAmb). 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+
+===== page 68 =====
+-68 CT  - 
+ 
+3.2.2. Failsafe 
+The pyrometer has a failsafe function that can be used in 
+analog mode. As source TProc, TInt or TBox can be selected.  
+The range can be configured as desired. The settings for 
+fail-safe operation allow the output of a defined level at the 
+analog output depending on defined temperature limits. 
+Thus a possible cable defect can be detected quickly. 
+ 
+ 
+ 
+
+===== page 69 =====
+ CT   69- 
+ 
+ 
+ 
+3.2.3. Digital Output AL2 
+The electronic box has an AL2 pin that can be 
+configured as an open -collector output (24 V/ 50 
+mA) under Digital Output AL2. 
+ 
+As source TProc, TInt or TBox can be selected. 
+ 
+Under Threshold the threshold value for 
+triggering the alarm is defined. 
+ 
+ 
+Hysteresis: Setting the minimum hysteresis 
+ 
+Selecting Open/Closed under Mode defines the output as High or Low alarm. 
+ 
+Difference mode: When activated, no absolute value is used for the alarm threshold, but the difference 
+between process temperature and ambient temperature (TProc-TAmb). 
+ 
+ 
+ 
+
+===== page 70 =====
+-70 CT  - 
+ 
+3.2.4. Relays 
+When using the optional relay interface, TProc, TInt or 
+TBox can be selected as source. 
+ 
+Under Threshold the threshold value for triggering 
+the alarm is defined. 
+ 
+Selecting Open/Closed under Mode defines the 
+output as High or Low alarm. 
+ 
+Difference mode:  When activated, no absolute 
+value is used for the alarm thres hold, but the 
+difference between process temperature and 
+ambient temperature (TProc-TAmb). 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+===== page 71 =====
+ CT   71- 
+ 
+ 
+ 
+3.3. I/O Pins 
+The CT 4M has three I/O pins, which can be programmed as output or input using the software. The following 
+functions are possible: 
+Function I/O Pin is on Description 
+Alarm Output (digital) Open collector output/ definition as High- or Low alarm via normally open/ 
+normally close options in software dialog. 
+Valid Low Input (digital) The output follows the object temperature as long as there is a Low level at the 
+I/O pin. After discontinuation of the Low level the last value will be held. 
+Valid High Input (digital) The output follows the object temperature as long as there is a High level at the 
+I/O pin. After discontinuation of the High level the last value will be held. 
+Hold Low-High Input (digital) The last value will be held if there is a signal with a rising edge on the I/O pin. 
+Hold High-Low Input (digital) The last value will be held if there is a signal with a falling edge on the I/O pin. 
+Hold Reset Low Input (digital) Reset of Peak or valley hold (High-Low signal) 
+Hold Reset High Input (digital) Reset of Peak or valley hold (Low-High signal) 
+External Emissivity Input (analog) The emissivity value can be adjusted via a 0-10 V signal on the I/O pin (scaling 
+possible via software). 
+Uncommitted value Input (analog) Display of uncommitted value 
+Laser on Low Input (digital) Turning on the laser (Low signal) 
+Laser off High Input (digital) Turning on the laser (High signal) 
+External  
+Ambient compensation 
+Input (analog) The ambient temperature will be determined by a voltage on the I/O-pin [0–10 V; 
+range scalable]. 
+External Transmitted 
+compensation 
+Input (analog) The transmitted ambient temperature will be determined by a voltage on the I/O-
+pin [0–10 V; range scalable]. 
+ 
+Low/High level: Via Software 
+ 
+ 
+===== page 72 =====
+-72 CT  - 
+ 
+When selecting the Alarm function, the following signal 
+sources can be selected: 
+▪ TProc Process temperature 
+▪ TInt Temperature of detector 
+▪ TBox General internal temperature 
+inside the housing 
+ 
+Under Threshold the threshold value for triggering the 
+alarm is defined. 
+ 
+Hysteresis: Setting the minimum hysteresis 
+ 
+Selecting Open/Closed under Mode defines the output as 
+High or Low alarm. 
+ 
+Difference mode:  When activated, no absolute value is 
+used for the alarm threshold, but the difference between 
+process temperature and ambient temperature (TProc -
+TAmb). 
+ 
+ 
+
+===== page 73 =====
+ CT   73- 
+ 
+ 
+ 
+If the function External Emissivity  is selected, the I/O pin is 
+programmed as analog input. The inp ut can be scaled in the fields 
+P1 [V], P2 [V], Epsilon P1 and Epsilon P2. 
+ 
+ 
+When the Hold Reset Low or Hold Reset High function is selected, 
+the I/O pin is programmed as digital input. When a Low or High level 
+is applied, an activated Hold function (MAX, MIN, extended MAX, 
+extended MIN) is reset. 
+ 
+
+===== page 74 =====
+-74 CT  - 
+ 
+3.4. Display 
+In this tab you can make settings for the display and the backlight (= visual alarms). Furthermore, the 
+temperature unit can be selected here. 
+ 
+3.4.1. Visual Alarms 
+Independent of the selected signal for the analog output, a signal from the following list can be selected under 
+General/ Main display Source, which is shown in the digital display of the electronics: 
+TProc Process temperature 
+TInt Temperature of detector 
+TBox General internal temperature inside the housing 
+ 
+For the visual alarm areas up to eight alarm limits can be assigned to a signal. The selected signal can be 
+selected under Source independent of the value shown in the display and independent of the analog output.  
+ 
+===== page 75 =====
+ CT   75- 
+ 
+ 
+ 
+ 
+ 
+3.4.2. Temperature unit 
+The temperature unit can be changed between °C and °F under Preferences/ Options. 
+
+===== page 76 =====
+-76 CT  - 
+ 
+3.5. Sensor Setup CT – Advanced Settings 
+The following parameters can be set in the Advanced Settings tab: 
+▪ Calibration 
+▪ USB Communication 
+▪ RS485 Multidrop address 
+▪ Locking and unlocking of the programming 
+keys 
+  
+
+===== page 77 =====
+ CT   77- 
+ 
+ 
+ 
+3.5.1. Sensor Setup CT – Calibration 
+In the Advanced Settings tab, three different modes can be selected to perform a calibration of the device:  
+▪ Manual 
+▪ 1 Point (Calibration) 
+▪ 2 Point (Calibration) 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+  
+
+===== page 78 =====
+-78 CT  - 
+ 
+3.5.2. Manual Calibration 
+For certain applications or under certain circumstances a temperature offset or a change of the gain for the 
+temperature curve may be useful. 
+ 
+The factory default settings for Offset and Gain are: 
+▪ Offset: 0,0 K 
+▪ Gain: 1,000 
+ 
+A changed Offset causes a parallel shifting of the temperature curve and therewith it has a linear effect on the 
+temperature reading (change constant independent on process temperature). A change of the Gain will have 
+a non-linear effect on the temperature reading (change depends on process temperature). 
+ 
+  
+ 
+ 
+ 
+ 
+
+===== page 79 =====
+ CT   79- 
+ 
+ 
+ 
+3.5.3. 1 Point Calibration 
+In this mode, a 1 -point calibration can be made for the device. To do this, select under Mode 1 Point 
+(Calibration) and enter the Actual Temperature and the Set Temperature. An offset calculation takes place 
+and is displayed. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+===== page 80 =====
+-80 CT  - 
+ 
+3.5.4. 2 Point Calibration 
+In this mode, a 2 point calibration can be made. To do this, select under Mode 2 Point (Calibration) and enter 
+the Actual Temperature and the Set Temperature for two different points. An offset and gain is then 
+calculated. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+===== page 81 =====
+ CT   81- 
+ 
+ 
+ 
+3.5.5. USB Communication 
+Under USB communication the baud rate of the 
+sensor can be selected. You can choose between 
+115200 and 921600. With activation of the check 
+sum 
+ 
+ 
+ 
+ 
+3.5.6. RS485-Multidrop address 
+In combination with a RS485 interface you can build a 
+network of several CT sensors (max. 32 sensors).  
+For the digital communication each sensor must have 
+its own address which you can enter in the input field 
+Multidrop address. ► RS485/ RS422  
+ 
+ 
+ 
+ 
+ 
+  
+
+===== page 82 =====
+-82 CT  - 
+ 
+3.5.7. Locking the programming keys 
+With this function you can lock the programming keys on the CT electronics to avoid a non-authorized change 
+of parameters on the unit. Pressing the button will set the unit into the Locked or Unlocked mode. In the 
+locked mode all parameter and settings can be displayed on the unit by pressing the Mode button – a change 
+of parameters with the Up or Down button is not possible.  
+ 
+ 
+  
+
+===== page 83 =====
+ CSvision   83- 
+ 
+ 
+ 
+4. CSvision 
+4.1. Setup CSvision 
+The button Setup [Menu: Device\ Device Setup] opens a window for the setting of all sensor parameters. 
+The dialog window is separated into 5 categories: 
+▪ Signal processing Setting of Ratio Mode, Emissivity/ Slope, Max Attenuation and Post 
+processing 
+▪ Output Setting of Output 1 and Output 2 
+▪ I/O Pins Setting the In- and Outputs 
+▪ Display Display main value and Backlight/ Alarm setting 
+▪ Advanced settings RS485/Modbus settings, Calibration 
+▪ Video Setting of video signals 
+ 
+  
+ 
+CSvision 
+
+===== page 84 =====
+-84 CSvision  - 
+ 
+4.2. Sensor Setup CSvision – Signal processing 
+In this category you can adjust the parameters Emissivity, Slope, Attenuation and select the functions and 
+define the parameters for Post processing. Furthermore, the desired ratio mode can be selected here. The 
+Standard Ratio mode is activated as default setting. 
+ 
+
+===== page 85 =====
+ CSvision   85- 
+ 
+ 
+ 
+4.2.1. Ratio Mode - Standard Ratio 
+Emissivity/ Slope/ Attenuation 
+The Slope is the quotient of the emissivity’s 
+of both of the overlapping wavelengths and 
+therewith the deciding parameter for 
+measurements in 2-color-mode. 
+ 
+The Emissivity ( – Epsilon) is a material 
+constant factor to describe the ability of a 
+body to emit infrared energy. The 
+emissivity only affects measurements in 
+the 1-color-mode. 
+ 
+The function Calculate Slope/Emissivity  
+allows the determination of an unknown 
+emissivity and slope at a known process 
+temperature. 
+ 
+ 
+ 
+ 
+Attenuation: The temperature display is fixed if the attenuation exceeds the limit specified here. You can 
+decide whether the last valid value should be kept or a fixed value entered. 
+
+===== page 86 =====
+-86 CSvision  - 
+ 
+4.2.2. Ratio Mode - Smart Ratio 
+While the standard mode requires a 
+constant emissivity ratio/slope, the 
+Smart Ratio measurement allows a data 
+set of different slopes to be recorded and 
+applied for temperature calculation. This 
+is required, for example, if the degree of 
+contamination of t he protective window 
+changes during the process and the ratio 
+temperature is no longer correct. This 
+cannot be described with a constant 
+slope.  
+ 
+A requirement for the measurement is that the object temperature must be known.  
+ 
+Note: Before the first use a data record must be recorded 
+ 
+In the Teach-in function, the data records are recorded. 
+ 
+The Smart Ratio mode can be activated or deactivated with the On/Off buttons. 
+ 
+ 
+ 
+ 
+ 
+  
+
+===== page 87 =====
+ CSvision   87- 
+ 
+ 
+ 
+Teach-In 
+ 
+The process temperature must be known for the teach-in function. This temperature can be set using two 
+variants: 
+• Variant 1: Via a fixed value 
+Here the known process temperature is entered 
+manually. 
+ 
+• Variant 2: Via Uncomitted value 
+The input is done via an analog signal, for example 
+an external sensor.  
+ 
+Procedure 
+ 
+Hold the dirty window in front of the sensor. 
+The Measure Now button (F12) can now be used to record 
+measuring points. The current transmission and slope are 
+entered into the table. Alternatively, the F12 button can be 
+pressed.  
+ 
+ 
+Note 
+When recording different measuring points, the current process temperature must always be taken 
+into account. At least two measuring points with different degrees of contamination. 
+Recommendation: The more measuring points the better 
+
+===== page 88 =====
+-88 CSvision  - 
+ 
+ 
+Smart Ratio Measurement: example with 11 measuring points 
+ 
+ 
+
+===== page 89 =====
+ CSvision   89- 
+ 
+ 
+ 
+The middle figure in the Smart Ratio Measurement 
+shows the transmission of diode 1 relative to the 
+transmission of diode 2. 
+ 
+The blue points are the recorded measuring points. 
+ 
+Green curve: Regression curve (polynomial) for 
+calculating the values between the measuring 
+points. 
+ 
+ 
+ 
+ 
+Note 
+The Smart Ratio method can only work if there is a monotonically increasing function progression. If 
+this is not the case, the Smart Ratio method cannot be used. If this is not the case, repeat the 
+measurement and check the measurement for measurement errors. 
+ 
+
+===== page 90 =====
+-90 CSvision  - 
+ 
+The right figure  in the Smart Ratio Measurement 
+shows the transmission ratio (slope) relative to the 
+transmission of diode 2. 
+ 
+The blue points are the recorded measuring points. 
+ 
+The violet horizontal line is the average slope 
+calculated from the measured values. 
+ 
+The red curve is an estimate of the quotient 
+temperature error (in Kelvin) when using the 
+average slope without the Smart Ratio method. 
+ 
+Green curve: Regression curve (polynomial) for 
+calculating the values between the  measurement 
+points. 
+ 
+ 
+To write the created curves to the device, the Apply Smart Ratio 
+with new data option must be selected in the menu under Apply 
+Correction Method. The created regression curve is now written 
+to the device. A message window appears indicating that the table 
+is being saved to the device. The Smart Ratio mode is now 
+automatically activated. 
+ 
+ 
+
+===== page 91 =====
+ CSvision   91- 
+ 
+ 
+ 
+ 
+ 
+Smart ratio mode is now activated. Further data points can no longer be recorded in this mode. To add more 
+data points, press the Continue Data Acquisition button (Smart Ratio mode is deactivated again). 
+ 
+After successful setting you can close the window with the OK button. 
+ 
+
+===== page 92 =====
+-92 CSvision  - 
+ 
+ 
+ 
+ 
+ 
+ 
+Activation of the Smart Ratio function is indicated by a green illuminated ON button. In addition, there is an 
+icon called SRM, which is framed in green when activated. 
+ 
+To deactivate the Smart Ratio function, you 
+can either click on the icon or on the green 
+on button. 
+ 
+Further Settings 
+ 
+
+===== page 93 =====
+ CSvision   93- 
+ 
+ 
+ 
+Further settings can be made in the menu under 
+File. 
+ 
+Save measurement pionts to CSV file:  The 
+created data is stored on a hard disk. 
+ 
+Save regression data to device: The created data 
+is stored on the device without activating or applying 
+the Smart Ratio method. 
+ 
+ 
+Save regression data to .dat file: Here the data is stored on a hard disk for external data analysis.  
+ 
+Load measurement points from CSV file:  If data sets already exist, the values can be read in and loaded 
+into the table. 
+ 
+Load regression data from device: To view the currently used regression curve. 
+ 
+Load regression data from file: The regression data is loaded from an existing file. 
+ 
+Load regression data from file and save to device: Here the regression data is loaded from an existing file 
+and saved directly to the device. 
+ 
+ 
+
+===== page 94 =====
+-94 CSvision  - 
+ 
+The following settings can be made in the menu under Data 
+Acquisition. 
+ 
+Measure Now:  A single measuring point is crea ted and 
+written to the table. 
+ 
+Start periodic measurement: A predefined interval can be 
+entered, in which the measuring points will be recorded 
+automatically.  
+ 
+Stop periodic measurement: The recording of new measuring points is stopped. 
+ 
+Averaging count: Signal averaging during transmission measurement (response time is extended).  
+ 
+Delete all measurement points: All measuring points in the table are deleted (not from the device). 
+ 
+ 
+Note 
+To delete individual measuring points, you must mark them in the table and remove them with the 
+delete key. 
+ 
+ 
+The following settings can be made in the menu under Data 
+Analysis. 
+ 
+Polynom of order: The polynomial order is specified here. 
+The factory setting is Auto and is determined automatically. 
+Alternatively, it can be changed manually if required.  
+ 
+
+===== page 95 =====
+ CSvision   95- 
+ 
+ 
+ 
+Regression accuracy:  Characteristic value to evaluate the description of the measured values by the 
+polynomial. Larger values are better. A value of 1 means perfect agreement. The regression accuracy is 
+calculated automatically. 
+ 
+Average slope: The mean value of all slopes is calculated (violet straight line in the right diagram). The default 
+setting is Auto. Alternatively it can be set manually. Allows to manually move the average slope (display 
+optimization). 
+ 
+The following settings can be made in the men u under 
+Apply. 
+Apply Smart Ratio with new data : The created regression 
+curve is written to the device and the Smart Ratio mode is 
+activated. A message window appears indicating that the 
+table is being saved to the device. 
+ 
+ 
+Apply Smart Ratio with old data: Regression curve already stored in the device is retained and Smart Ratio 
+mode is activated. 
+ 
+Apply average slope: Set average slope and activate standard ratio mode. 
+ 
+Apply old slope: Restore the slope value before opening the Smart Ratio configuration. 
+ 
+ 
+4.2.3. Post Processing 
+In the category Post Processing you can select the Source and make following settings: 
+
+===== page 96 =====
+-96 CSvision  - 
+ 
+▪ Averaging (Averaging time, average mode, smart threshold) 
+▪ Hold mode (Mode: Off, Peak Hold, Valley Hold, Advanced Peak Hold, Advanced Valley Hold)  
+ 
+You will find the description of the single functions on 
+the next page. 
+ 
+Smart Averaging 
+If activated , a dynamic average adaptation at high 
+signal edges is active. In addition you can enter the 
+minimum temperature difference ( Smart Averaging 
+Hysteresis) to trigger this function.  
+ 
+
+===== page 97 =====
+ CSvision   97- 
+ 
+ 
+ 
+Averaging In this mode an arithmetic algorithm will be performed to smoothen the 
+signal. The Averaging Time  is the time constant. This function can be 
+combined with all other post processing functions. The minimum adjustable 
+average time is 0,001 s. 
+Peak hold In th is mode the sensor is waiting for descending signals. If the signal 
+descends the algorithm maintains the previous signal peak for the specified 
+Hold time. 
+The minimum adjustable hold time is 0,001 s. 
+After the hold time the signal will drop down to the second highest value or 
+will descend by 1/8 of the difference between the previous peak and the 
+minimum value during the hold time. This value will be held again for the 
+specified time. After this the si gnal will drop down with slow time constant 
+and will follow the current process temperature.  
+Therefore, if periodic events will be measured (bottles on a conveyor e.g.) 
+this peak hold function avoids a drop down of the signal to the conveyor 
+temperature in-between 2 events. 
+Valley hold In this mode the sensor waits for ascending signals. If the signal ascends 
+the algorithm maintains the previous signal valley for the specified Hold 
+time. The definition of the algorithm is according to the peak hold algorithm 
+(inverted). 
+Advanced Peak hold In this mode the sensor waits for local peak values. Peak values which are 
+lower than their predecessors will only be taken over if the temperature has 
+fallen below the Threshold value beforehand. If Hysteresis is activated a 
+===== page 98 =====
+-98 CSvision  - 
+ 
+peak in addition must decre ase by the value of the hysteresis before the 
+algorithm takes it as a new peak value. 
+Advanced Valley hold This mode is the inverted function of Advanced Peak hold. The sensor 
+waits for local minima. Minimum values which are higher than their 
+predecessors will only be taken over if the temperature has exceeded the 
+Threshold value beforehand. If Hysteresis is activated a minima in 
+addition must increase by the value of the hysteresis before the algorithm 
+takes it as a new minimum value. 
+Smart Averaging If activated, a dynamic average adaptation at high signal edges is active. 
+Off If Off is activated, no post processing will happen. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+===== page 99 =====
+ CSvision   99- 
+ 
+ 
+ 
+4.3. Sensor Setup CSvision – Output 
+4.3.1. Output 1 and 2 
+The device has two outputs (OUT 1, OUT 2) which can be configured 
+as desired. The following options are available under Mode: 
+• Off 
+• Analog 
+• Alarm  
+ 
+Bei Aktivierung von Analog stehen im Feld Quelle folgende Signalquellen zur Wahl: 
+▪ TProc Process temperature 
+ 
+▪ TRatio Ratio temperature 
+▪ T1 1 channel temperature 
+▪ T2 2 channel temperature 
+▪ Attenuation Signal attenuation in % 
+▪ TDet Temperature of detector 
+▪ TBox Sensor temperature 
+ 
+
+===== page 100 =====
+-100 CSvision  - 
+ 
+The desired temperature measuring range of the sensor 
+can now be set. The range limits can be changed by 
+entering them in the corresponding fields. The source can 
+be selected between TProc, TRatio, T1, T2, Attenuation, TDet 
+or TBox. 
+▪ TMin: lower temperature range limit 
+▪ TMax: upper temperature range limit 
+▪ Min [mA]: lower limit mA output 
+▪ Max [mA]: upper limit mA output 
+ 
+
+===== page 101 =====
+ CSvision   101- 
+ 
+ 
+ 
+Alternatively, outputs 1 and 2 can be used as alarm 
+outputs. To do this, select the Alarm setting.  
+As source you can choose between TProc, TRatio, T1, T2, 
+Attenuation, TDet or TBox. 
+Under Threshold the threshold value for triggering the 
+alarm is defined. 
+Hysteresis: Setting the minimum hysteresis 
+Alarm Off [mA]: Value if no alarm 
+Alarm On [mA]: Value on alarm 
+Selecting Open/Closed under Mode defines the output as 
+High or Low alarm. 
+ 
+
+===== page 102 =====
+-102 CSvision  - 
+ 
+4.3.2. Failsafe 
+The pyrometer has a failsafe function that can be used in analog 
+mode. 
+The range can be configured as desired. The settings for fail-safe 
+operation allow a defined level to be output at the analog output 
+depending on specified temperature limits. 
+Thus, a possible cable defect can be detected quickly. 
+ 
+ 
+4.4. Sensor Setup CSvision – I/O-Pin 
+The CSvision has one I/O pin which can be programmed as in - or output using the software. The following 
+options are available: 
+Function I/O pin acts as Description 
+Alarm output (digital) Open collector output/ definition as HIGH- or LOW alarm via norm. open/ 
+norm. close options in software dialog. 
+Valid Low input (digital) The output follows the process temperature as long as there is a Low level 
+at the I/O pin. After discontinuation of the Low level the last value will be 
+held. 
+Valid High input (digital) The output follows the process temperature as long as there is a High level 
+at the I/O pin. After discontinuation of the High level the last value will be 
+held. 
+
+===== page 103 =====
+ CSvision   103- 
+ 
+ 
+ 
+Hold Low-High input (digital) The last value will be held if there is a signal with a rising edge on the I/O 
+pin. 
+Hold High-Low input (digital) The last value will be held if there is a signal with a falling edge on the I/O 
+pin 
+Hold Reset Low input (digital) Reset of a hold function on a Low level at the I/O pin 
+Hold Reset High input (digital) Reset of a hold function on a High level at the I/O pin 
+Slope external input (analog) External adjustment of the slope value using an analog voltage (0-10V) 
+Emissivity external input (analog) External adjustment of the emissivity value using an analog voltage (0-10V) 
+Uncommitted Value input (analog) Display of a freely scalable value 
+Laser on Low input (digital) Switch on laser (Low signal) 
+Laser on High input (digital) Switch on laser (High signal) 
+Low-/High-level: via software
+===== page 104 =====
+-104 CSvision  - 
+ 
+If you select the function Alarm the following signal sources can be 
+selected: 
+▪ TProcess Process temperature 
+▪ TRatio Ratio temperature 
+▪ T1 1 channel temperature 
+▪ T2 2 channel temperature 
+▪ Attenuation Signal attenuation in % 
+▪ TDet Detector temperature 
+▪ TBox Sensor temperature  
+ 
+The definition as Low or High alarm can be done by switching 
+between Normally: open and Normally: closed.  
+ 
+If you select the function Slope external or Emissivity external the 
+I/O pin is set as analog input. The scaling can be done using the 
+parameter fields P1/P2 and Slope P1/P2 / Epsilon P1/P2. 
+ 
+
+===== page 105 =====
+ CSvision   105- 
+ 
+ 
+ 
+If you select the function Hold Reset Low  or Hold Reset High  the 
+I/O-Pin is set as digital input. An activated hold function (MAX, MIN, 
+advanced MAX, advanced MIN) will be reset if a low or high level is 
+at the I/O pin. 
+ 
+ 
+
+===== page 106 =====
+-106 CSvision  - 
+ 
+4.5. Sensor Setup CSvision – Display 
+In this tab you can make settings for the backlight LED (=visual alarms).  
+ 
+4.5.1. Visual Alarms 
+Independent of the selected signal for the analog output, a signal from the following list can be selected under 
+General/ Main display source, which is shown in the digital display of the electronics: 
+TProc Process temperature 
+TRatio Ratio temperature 
+T1 Temperature value 1-color-mode 
+T2 Temperature value 2-color-mode 
+Attenuation Signal attenuation in % 
+TDet Temperature of the detector 
+TBox Temperature of the electronics 
+ 
+For the visual alarm areas up to eight alarm limits can be assigned to a signal. The selected signal can be 
+selected under Source independent of the value shown in the display and independent of the analog output.  
+ 
+ 
+===== page 107 =====
+ CSvision   107- 
+ 
+ 
+ 
+ 
+ 
+ 
+4.5.2. Temperature unit 
+The temperature unit can be changed between °C and °F under Preferences/ Options. 
+
+===== page 108 =====
+-108 CSvision  - 
+ 
+4.6. Sensor Setup CSvision – Advanced Settings 
+In the category Advanced Settings the following parameter can be adjusted: 
+▪ Interface  
+o RS485 – Terminal Resistor, Baudrate, Base Address 
+o RS422 – Terminal Resistor, Baudrate 
+o Modbus – Terminal Resistor, Baudrate, Bus address/Node ID 
+ 
+▪ Field Calibration 
+o Manual 
+o 1 Point 
+o 2 Point 
+ 
+   
+===== page 109 =====
+ CSvision   109- 
+ 
+ 
+ 
+4.6.1. RS485 Base Address 
+In combination with a RS485 interface you can build a 
+network of several CTratio sensors (max. 32 sensors). 
+For the digital communication each sensor must have 
+its own address which you can enter in the input field 
+Baseaddress. 
+► RS485/ RS422 
+ 
+The Terminal resistor has t o be set to Yes at the last 
+unit in your network. 
+ 
+
+===== page 110 =====
+-110 CSvision  - 
+ 
+4.6.2. Field Calibration 
+In the Advanced Settings  tab, three different modes can be 
+selected to perform a calibration of the device: 
+▪ Manual 
+▪ 1 Point (Calibration) 
+▪ 2 Point (Calibration) 
+ 
+These amplification factors can be entered for the Ratio, T1 and 
+T2 temperature. 
+ 
+Manual Calibration 
+For certain applications or under certain circumstances a 
+temperature offset or a change of the gain for the temperature 
+curve may be useful. 
+ 
+The factory default settings for Offset and Gain are: 
+▪ Offset: 0,0 K 
+▪ Gain: 1,000 
+▪   
+ 
+A changed Offset causes a parallel shifting of the temperature curve and therewith it has a linear effect on 
+the temperature reading (change constant independent on process temperature). A change of the Gain will 
+have a non-linear effect on the temperature reading (change depends on process temperature). 
+  
+
+===== page 111 =====
+ CSvision   111- 
+ 
+ 
+ 
+1 Point Calibration 
+In this mode, a 1-point calibration can be made for the device. To do this, select under Mode 1 Point 
+(Calibration) and enter the actual temperature and the set temperature. An offset calculation takes place 
+and is displayed. 
+ 
+
+===== page 112 =====
+-112 CSvision  - 
+ 
+2 Point Calibration 
+In this mode, a 2-point calibration can be made. To do this, select under Mode 2 Point (Calibration) and 
+enter the actual temperature and the set temperature for two different points. An offset and gain is then 
+calculated. 
+ 
+ 
+
+===== page 113 =====
+ CSvision   113- 
+ 
+ 
+ 
+4.6.3. Videosignal 
+The CSvision has an integrated visual camera with a built-in two-step brightness reduction filter. For very 
+overexposed objects, the filter can be switched in two steps. It also has digital exposure of the signal and can 
+be adjusted in the brightness bar.  
+Additionally, the image can be zoomed in or out with the mouse wheel. If your pyrometer is not perpendicular 
+to your target, the image can be rotated by drag and drop with the left mouse button. 
+If your image display is blurred, you can focus the image using the focus bar below the image.  
+ 
+
+===== page 114 =====
+-114 CSvision  - 
+ 
+4.6.4. Automatic Snapshots 
+You can have temperature-triggered snapshots of the video signal created automatically. To do this, go to 
+Measurement/ Automatic snapshots and set the check mark under Enable snapshot trigger. Now you 
+can make the settings for triggered snapshots. In addition, you can have the trigger threshold shown in the 
+diagram. 
+If a trigger event has happened and a triggered photo has been taken, an icon of a camera is shown in the 
+temperature-time diagram. 
+ 
+Further settings can be made under Preferences/ Video snapshot Setup. The description of the snapshot 
+with information on the date, time, serial number of the sensor and other measuring point information can be 
+made, and the file storage location for the snapshots can be changed.
+
+===== page 115 =====
+ Special Feature   115- 
+ 
+ 
+ 
+5. Special Feature 
+5.1. Saving the Sensor Configuration 
+In each window which you enter with the button Setup [Menu: 
+Device\ Device Setup]  you will find at the bottom edge the 
+following buttons for saving of the sensor configuration: 
+ 
+   
+ 
+ 
+Save Config With this button you can save the current configuration of the connected sensor 
+in a file (ending: *.cfg). An explorer window will be opened and enables definition 
+of filename and destination. 
+Load Config A previous saved configuration can be opened and stored into the connected 
+sensor. 
+Factory default This button enables the user to reset the unit to the factory default values. It also 
+can be reset by pressing at first the Down button and then the Mode button (keep 
+both pressed for approx. 3 seconds). 
+ 
+After pressing OK all changes and settings will apply. 
+
+===== page 116 =====
+-116 Special Feature  - 
+ 
+5.2. Smart Averaging 
+The average function is generally used to smoothen the output signal. With the adjustable parameter time this 
+function can be optima l adjusted to the respective application. One disadvantage of the average function is 
+that fast temperature peaks which are caused by dynamic events are subjected to the same averaging time. 
+Therefore those peaks can only be seen with a delay on the signal output. 
+The function Smart Averaging eliminates this disadvantage by passing those fast events without averaging 
+directly through to the signal output. 
+ 
+ 
+ 
+ 
+ 
+Signal graph with Smart Averaging function 
+ 
+Signal graph without Smart Averaging function 
+
+===== page 117 =====
+ Special Feature   117- 
+ 
+ 
+ 
+5.3. Binary Chat Program 
+In the download package  you will find an additional program for a simple check of the digital communication 
+of the connected sensor. Please copy the application (BinaryChat.exe) out of the folder \Binary Chat Program 
+on your desktop or into any desired folder on your hard disc drive of your PC. After starting the program the 
+following window will appear: 
+ 
+ 
+Please select at first the COM port of the connected sensor (you will find this information in the status line o f 
+your CompactPlus Connect or in the device manager of your PC). 
+Please enter the Baudrate your sensor is working with. 
+Now you can open the COM port by pressing the button Open COM. 
+
+===== page 118 =====
+-118 Special Feature  - 
+ 
+ 
+Note 
+Before you open the COM port please close the CompactPlus Connect software as this application may access 
+the same sensor/ COM port. 
+Please make sure that the sensor is set to bidirectional digital communication. 
+ 
+ 
+Now you can enter a binary command as hexadecimal value out of the according command list of the 
+connected sensor. After pressing Send the answer will be shown in the line Receive (also as HEX value). 
+Below the receive line you will find the Integer decimal value of the answer as well as the calculated 
+Temperature or the Decimal value which is calculated by dividing the answer by 1000. This calculation is 
+used for the emissivity value e.g. 
+ 
+ 
+Example 1: CTratio/ Polling of the process temperature 
+
+===== page 119 =====
+ Special Feature   119- 
+ 
+ 
+ 
+Example 1 shows the polling of the process temperature from a C Tratio. This is done accord ing to the 
+command list (Folder: Commands): 
+ 
+ 
+ 
+5.3.1. Additional Features 
+Under Averaging you can calculate the average value out of a defined number of values Count. 
+ 
+If you press the button Start Timer you can activate a repeated polling of values (useful for process 
+temperature e.g.). The polling Interval can be set (in ms). 
+Please use only times >50 ms, as otherwise you may receive wrong data. 
+ 
+ 
+
+===== page 120 =====
+-120 Menu Overview  - 
+ 
+6. Menu Overview 
+Using the menu you can adjust all software settings. Each feature will be explained in detail in the following 
+chapters of this manual: 
+ 
+ 
+ 
+6.1. Menu: File 
+ 
+Save Diagram To save temperature files 
+ 
+Open Diagram To open saved temperature files (*.dat) 
+Exit To exit the program 
+ 
+ 
+
+===== page 121 =====
+ Menu Overview   121- 
+ 
+ 
+ 
+6.2. Menu: Measurement 
+ 
+Start To start the measurement 
+ 
+Pause To freeze the continuous diagram 
+actualization 
+Stop To stop the measurement 
+Settings Opens the window: Measurement 
+Settings 
+Configure Burst String In the burst mode the sensor works in a 
+unidirectional communication mode – the 
+sensor is sending data continuously. 
+ 
+ 
+
+===== page 122 =====
+-122 Menu Overview  - 
+ 
+6.3. Menu: Device 
+ 
+Scan Devices Scans for connected sensors (if Auto 
+scan is deactivated) 
+ 
+Disconnect The connection will be determined and 
+the COM port will be closed. 
+Device Info Shows information about the connected 
+unit (firmware revision etc.). 
+Device Setup... Opens the window: Device setup 
+Loop Maintenance Verification of the analog output channels 
+Laser To switch On and Off the Laser 
+ 
+ 
+
+===== page 123 =====
+ Menu Overview   123- 
+ 
+ 
+ 
+6.4. Menu: Diagram 
+ 
+Settings Opens the window: Diagram settings to select digital 
+displays, temperature graphs, pen width and color of graphs 
+ 
+ 
+ 
+CT 4M 
+ 
+CTratio 
+
+===== page 124 =====
+-124 Menu Overview  - 
+ 
+6.5. Menu: View 
+ 
+Title bar To show or hide the title bar of the software 
+window 
+ 
+Menu bar To show or hide the menu bar of the software 
+window 
+Tool bar To show or hide the tool bar 
+Tool bar captions To show or hide the captions of the tool bar 
+Status bar To show or hide the status bar 
+Digital Selection of all available values which can be 
+shown as a digital display 
+ 
+Diagram To show or hide the temperature diagram 
+
+===== page 125 =====
+ Menu Overview   125- 
+ 
+ 
+ 
+Always on top If activated, the software screen will always visible on top (independent on other 
+active applications) 
+Enable Video To switch on and off the video display 
+Video snapshot To make a snapshot 
+Temp. displays top The digital display group will be located on the top right corner of the software 
+screen 
+Temp. display right The digital display group will be located on the right side of the software window  
+Show all bars All bars will be shown (title-, menu-, tool- and status-bar) 
+Hide all bars All bars will be hidden (title-, menu-, tool- and status-bar) 
+External Display To open an external display 
+ 
+Log window Display of logged software 
+events 
+
+===== page 126 =====
+-126 Menu Overview  - 
+ 
+6.6. Menu: Preferences 
+ 
+Options Opens the window: Options to make 
+basic settings and define options for 
+data saving 
+ Language To select the desired language 
+Set default software 
+settings 
+The software will be reset to the factory default settings (The sensor settings 
+are not affected by this) 
+ 
+ 
+6.7. Menu: Help 
+ 
+Help... To open the help file 
+ 
+www.optris.global Opens the Optris homepage in your web 
+browser 
+About... To show the software version installed on 
+your computer 
+ 
+
+===== page 127 =====
+ Menu Overview   127- 
+ 
+ 
+ 
+6.8. Context Menu (right mouse button) 
+ 
+Settings Opens the window: Diagram settings to select digital 
+displays, temperature graphs, pen width and color of 
+graphs  
+View Linking to the sub menu View 
+ 
+ 
+
+===== page 128 =====
+-128 Menu Overview  - 
+ 
+6.9. Context Menu [Sub menu: View] 
+ 
+Title bar Shows or hides the title bar 
+ 
+Menu bar Shows or hides the menu bar 
+Tool bar Shows or hides the tool bar 
+Tool bar captions Shows or hides the tool bar captions 
+Status bar Shows or hides the status bar 
+Diagram Shows or hides the diagram 
+Temperature 
+Display top 
+Places the digital displays on top of the 
+diagram 
+Temperature 
+Display right 
+Places the digital displays right of the 
+diagram 
+Show all bars Shows all bars at once 
+Hide all bars Hides all bars at once 
+External display Linking to the sub menu External 
+display 
+Log window Display of logged software events  
+ 
+ 
+
+===== page 129 =====
+ Menu Overview   129- 
+ 
+ 
+ 
+6.10. Context-Menu [Sub menu: External Display] 
+In this menu you can call separate digital displays 
+for the different signals. These displays will also be 
+shown if the application runs in the invisible mode. 
+The displays are always on top of the PC screen. 
+ 
+ 
+
+===== page 130 =====
+ 
+ 
+ 
+ 
+ 
+ optris CompactPlus Connect-MA-E2023-03-A 
+ 

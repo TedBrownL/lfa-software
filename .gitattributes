@@ -1,0 +1,11 @@
+# 统一换行：仓库内一律存 LF，避免 Windows 上 CRLF 污染 diff
+* text=auto eol=lf
+
+# 批处理必须 CRLF，否则 cmd 解析出错
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# 二进制
+*.png binary
+*.zip binary
+*.pdf binary

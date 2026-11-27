@@ -1,0 +1,860 @@
+
+===== page 1 =====
+ 
+ 
+Communication interface 
+   
+ 
+   
+CT 4M commands_2024-03-A  1 
+ 
+Optris GmbH 
+Ferdinand-Buisson-Str. 14  
+13127 Berlin Tel. +49 (0)30 500 197-0 info@optris.com 
+Germany Fax +49 (0)30 500 197-10 www.optris.com 
+Optris CT 4M communication interface 
+ 
+Serial interface parameters 
+ 
+Baud rate: 115,2 / 921,6 kBaud (factory default: 115,2) 
+Data bits: 8 
+Parity: none 
+Stop bits: 1 
+Flow control: off 
+ 
+ 
+Protocol 
+ 
+The protocol of the optris CT 4M is a binary protocol. Checksum is needed for set commands but not for 
+read commands. The protocol has no additional overhead with CR, LR or ACK bytes. This makes the 
+communication fast. 
+To get the current object temperature the user must send a simple 01 hex byte and the CT 4M will respond 
+with the two byte temperature. To get the temperature as a floating value subtract 1000 and divide by 10. 
+ 
+Checksum’s 
+ 
+If the device is setup to use checksums any SET command must have a checksum suffix. The checksum 
+can be switched off with command AD. After every “Power on” the device will expect the checksum again.  
+The checksum byte is build by the arithmetical XOR of all command bytes except of the address prefix.  
+ 
+To switch off the checksums with the SET command AD you must send the checksum. 
+To switch on the checksums with the SET command AD you must not send the checksum. 
+ 
+Please note that all commands that are more than one byte long require a checksum!  
+ 
+The checksum is formed by an XOR combination of all bytes to be sent.  
+Checksum = byte1 XOR byte2 XOR byte3 … 
+ 
+Addressing RS485 
+ 
+This is relevant for communic ation with the RS485 bus only. If you use the RS485 interface board you 
+must use the multidrop addresses. 
+A multidrop address is a simple prefix byte to the command. The byte is build  by adding the hexadecimal 
+value B0 to the device address. B5 01 will read the temperature from the device with the address 5.  
+ 
+The address of any device can be set by the device user interface (“M__01”) or by the communication 
+interface with the command 90 (Hex).  
+ 
+A special case is address prefix B0 for set commands. Because there is no multidrop address 0 this 
+addresses no certain device. But a SET command with prefix broadcast the command to all devices at 
+the RS485 bus.  
+ 
+Note: The command is executed immediately on any of the devices even if they do not respond to the 
+command. That is because all are slaves and can’t talk at the same time.  
+ 
+ 
+ 
+===== page 2 =====
+ 
+ 
+Communication interface 
+   
+ 
+   
+CT 4M commands_2024-03-A  2 
+ 
+Optris GmbH 
+Ferdinand-Buisson-Str. 14  
+13127 Berlin Tel. +49 (0)30 500 197-0 info@optris.com 
+Germany Fax +49 (0)30 500 197-10 www.optris.com 
+Table of contents 
+1 BASIC FUNCTIONS 3 
+1.1 IR- SETTINGS 3 
+1.1.1 EXAMPLE OF READ AND SET THE EMISSIVITY VALUE 3 
+1.2 AIMING 3 
+2 SIGNAL PROCESSING 4 
+2.1 AVERAGING 4 
+2.1.1 DESCRIPTION AVG READ / SET (ALL BYTES IN HEX) 4 
+2.2 HOLD FUNCTIONS 4 
+2.2.1 DESCRIPTION HOLD READ / SET (ALL BYTES IN HEX) 4 
+3 OUTPUT, INPUTS SETTINGS 5 
+3.1.1 DESCRIPTION OUTPUT VALUE (MA/MV) READ / SET (ALL BYTES IN HEX) 5 
+3.1.2 DESCRIPTION I/O PIN VALUES READ / SET (ALL BYTES IN HEX) 6 
+4 VISUAL ALARM SETTINGS AND DISPLAY 10 
+4.1.1 DESCRIPTION VISUAL ALARM ENTRIES READ / SET (ALL BYTES IN HEX) 10 
+4.1.2 DESCRIPTION VISUAL ALARM VALUE READ / SET (ALL BYTES IN HEX) 10 
+5 ADVANCED SETTINGS 11 
+5.1 SENSOR INFORMATION/ CALIBRATION 11 
+5.1.1 DESCRIPTION USER OFFSET VALUE READ / SET (ALL BYTES IN HEX) 11 
+5.1.2 DESCRIPTION USER GAIN VALUE READ / SET (ALL BYTES IN HEX) 11 
+5.1.3 DESCRIPTION MODEL INFORMATION READ VALUE: (ALL BYTES IN HEX) 11 
+5.2 ADVANCED IR-SETTINGS 12 
+5.2.1 DESCRIPTION AMBIENT VALUES READ / SET (ALL BYTES IN HEX) 12 
+5.3 ADVANCED DIGITAL COMMUNICATION SETTINGS 12 
+5.3.1 DESCRIPTION BURST-VALUE READ / SET (ALL BYTES IN HEX) 12 
+5.4 LOOP MAINTENANCE 13 
+5.4.1 DESCRIPTION SET OUTPUT MA/MV (ALL BYTES IN HEX) 13 
+5.5 FURTHER ADVANCED SETTINGS 13 
+6 CONTACT INFORMATION 14 
+ 
+===== page 3 =====
+ 
+ 
+Communication interface 
+   
+ 
+   
+CT 4M commands_2024-03-A  3 
+ 
+Optris GmbH 
+Ferdinand-Buisson-Str. 14  
+13127 Berlin Tel. +49 (0)30 500 197-0 info@optris.com 
+Germany Fax +49 (0)30 500 197-10 www.optris.com 
+1 Basic Functions 
+DECIMAL HEX Command Data Answer Result Unit 
+1 0x01 READ Temp. - Process none byte1 byte2 = (byte1*256 + byte2 - 1000) / 10 °C 
+2 0x02 READ Temp. - Int none byte1 byte2 = (byte1*256 + byte2 - 1000) / 10 °C 
+3 0x03 READ Temp. - Box none byte1 byte2 = (byte1*256 + byte2 - 1000) / 10 °C 
+10 0x0A READ Temp. - Avg none byte1 byte2 = (byte1*256 + byte2 - 1000) / 10 °C 
+ 
+1.1 IR- Settings 
+DECIMAL HEX Command Data Answer Result 
+4 0x04 READ Epsilon 
+SET Epsilon 
+byte1 byte2 byte1 byte2 =(byte1*256 + byte2) / 1000 
+144 0x90 READ Epsilon Act  byte1 byte2 =(byte1*256 + byte2) / 1000 
+145 0x91 READ Transmission Act  byte1 byte2 =(byte1*256 + byte2) / 1000 
+ 
+1.1.1 Example of READ and SET the emissivity value 
+READ emissivity value (FFFF for READ): 0400FFFF04 
+ 
+byte1 byte2 byte3 byte4 
+04 FF FF 04 
+Command Value Value Check sum 
+ 
+SET emissivity value to 0.8: 0400032027 
+ 
+byte1 byte2 byte3 byte4 
+04 03 20 27 
+Command Value Value Check sum 
+ 
+Explanation: 
+Bring value to HEX: 0,8Float → 800Decimal → 0320HEX 
+Check sum: 04 XOR 00 XOR 03 XOR 20 = 27 
+ 
+1.2 Aiming 
+DECIMAL HEX Command Data Answer Result 
+37 0x25 READ Laser 
+SET Laser 
+byte1 byte1 = ON if byte1 =1 , OFF if byte1=0 
+Read byte1 = 0xFF 
+ 
+===== page 4 =====
+ 
+ 
+Communication interface 
+   
+ 
+   
+CT 4M commands_2024-03-A  4 
+ 
+Optris GmbH 
+Ferdinand-Buisson-Str. 14  
+13127 Berlin Tel. +49 (0)30 500 197-0 info@optris.com 
+Germany Fax +49 (0)30 500 197-10 www.optris.com 
+2 Signal Processing 
+2.1 Averaging 
+Smart averaging stops averaging if big temperature changes are occurring. For more information see 
+manual. 
+ 
+DECIMAL HEX Command Data Answer Result 
+6 0x06 READ AVG Values 
+SET AVG Values 
+byte1 byte 2 byte 3 byte1 byte2 See AVG Value 
+ 
+2.1.1 Description Avg READ / SET (all bytes in HEX) 
+06 xx yy yy 
+ 
+Possible values for xx: 
+00 Time (yyyy - 1…65000 ms, FFFF for READ) 
+01 Smart Avg on (0 - off, 1- on, FFFF for READ) 
+02 Smart threshold (1, FFFF for READ) 
+ 
+ 
+2.2 Hold Functions 
+DECIMAL HEX Command Data Answer Result 
+7 0x07 READ Hold Value 
+SET Hold Value 
+byte 1byte2 byte3 byte1 byte2 See Hold Value 
+ 
+2.2.1 Description Hold READ / SET (all bytes in HEX) 
+07 xx yy yy 
+ 
+Possible values for xx: 
+00 Mode (0 - off, 1 - Peak, 2 - Valley, Adv. Peak, Adv. Valley, FFFF for READ) 
+01 Time (yyyy - 1...64999 (65000 for infinity), FFFF for READ) 
+02 Adv. threshold (yyyy - Temperature range, FFFF for READ) 
+03 Adv. Hysteresis (1, FFFF for READ) 
+ 
+ 
+===== page 5 =====
+ 
+ 
+Communication interface 
+   
+ 
+   
+CT 4M commands_2024-03-A  5 
+ 
+Optris GmbH 
+Ferdinand-Buisson-Str. 14  
+13127 Berlin Tel. +49 (0)30 500 197-0 info@optris.com 
+Germany Fax +49 (0)30 500 197-10 www.optris.com 
+3 Output, Inputs settings 
+For the analog output there are the output channels 1 and 2. Details are shown in the tables below. For 
+further information see the examples. 
+ 
+DECIMAL HEX Command Data Answer Result Unit 
+8 0x08 READ I/O1, I/O2, IO/3  
+mA value 
+byte1 byte1 byte2 = (byte1*256 + byte2 - 1000) / 10 V 
+17 0x11 READ / SET Output 
+Value (mA) 
+byte1 bye2 
+byte3 byte4 
+byte1 byte2 See Output Values  
+21 0x15 READ / SET I/O Pin 
+Values 
+byte1 byte2 
+byte3 …byte6 
+byte1 byte2 See I/O Pin Values  
+ 
+3.1.1 Description Output Value (mA/mV) READ / SET (all bytes in HEX) 
+11 xx yy uu uu 
+Possible values for xx (Output-No.): 00 or 01 
+Possible values for yy: 
+ 
+00 - Mode 
+0000 = Off (0 mA) 
+0001 = Analog Output mA 
+0002 = Analog Output mV 
+0003 Alarm mA 
+0004 Alarm mV 
+0005 TCK 
+ 
+18 - Analog Failsafe mA below 
+uu uu = µA Value 
+ 
+19 - Analog Failsafe mA above 
+uu uu = µA Value 
+ 
+10 - Analog Source 
+0000 = Temp Process 
+0001 = Temp Int 
+0002 = Temp Box 
+ 
+1A - Analog Failsafe Range below 
+uu uu = Temp. Value 
+ 
+11 - Analog mA below 
+uu uu = µA Value 
+ 
+1B - Analog Failsafe Range above 
+uu uu = Temp. Value 
+ 
+12 - Analog mA above 
+uu uu = µA Value 
+ 
+1C - Analog Failsafe Active below 
+0000 = inactive 
+0001 = active 
+ 
+13 - Analog Range below 
+uu uu = Temp. Value 
+ 
+1D - Analog Failsafe active above 
+0000 = inactive 
+0001 = active 
+ 
+14 - Analog Range above 
+uu uu = Temp. Value 
+ 
+20 - Alarm Source 
+0000 = Temp Process 
+0001 = Temp Int 
+0002 = Temp Box 
+ 
+15 - Analog mV below 
+uu uu = Temp. Value 
+ 
+21 - Alarm Threshold 
+uu uu = Temp. Value 
+ 
+16 - Analog mV above 
+uu uu = Temp. Value 
+ 
+22 - Alarm Hysteresis 
+uu uu = Hysteresis 
+ 
+  
+===== page 6 =====
+ 
+ 
+Communication interface 
+   
+ 
+   
+CT 4M commands_2024-03-A  6 
+ 
+Optris GmbH 
+Ferdinand-Buisson-Str. 14  
+13127 Berlin Tel. +49 (0)30 500 197-0 info@optris.com 
+Germany Fax +49 (0)30 500 197-10 www.optris.com 
+23 - Alarm mA - NO Alarm 
+uu uu = µA Value 
+ 
+26 - Alarm Difference Mode 
+0000 = inactive 
+0001 = active 
+ 
+24 - Alarm mA - Alarm 
+uu uu = µA Value 
+ 
+27 - Alarm mV - NO Alarm 
+uu uu = µA Value 
+ 
+25 - Alarm N.O. / N.C. 
+0000 = normally open 
+0001 = normally close 
+ 
+28 - Alarm mV - Alarm 
+uu uu = µA Value 
+ 
+ 
+ 
+ 
+ 
+3.1.2 Description I/O Pin Values READ / SET (all bytes in HEX) 
+Send for READ I/O 1: 15 nn xx yy FF FF, SET: 15 nn xx yy zz zz 
+Possible values for nn: 0x00...0x02 (I/O1…I/O3) 
+Possible values for xx: 
+ 
+0x00: Function 
+Possible values for yy: 0x00 
+Possible values for zz zz: 
+0x00: not used 
+0x01: Alarm 
+0x02: valid low 
+0x03: valid high 
+0x04: Hold LoHi 
+0x05: Hold HiLo 
+0x05: Hold Reset low 
+0x06: Hold Reset high 
+0x07: analog Epsilon 
+0x08: analog Uncommitted Value 
+0x09 Laser on Low 
+0x0A Laser on High 
+0x0B analog Ambient 
+0x0C analog Transmitted Radiation 
+ 
+Alarm Values: 
+0x10: Source 
+Possible values for yy: 0x00 
+Possible values for zz zz: 
+0x00: Threshold Temp Process 
+0x01: Threshold Temp Int 
+0x02: Threshold Temp Box 
+ 
+0x11: Threshold 
+Possible values for yy: 0x00…0x0F (Source) up to 16 entries (Source) 
+Possible values for zz zz: 0x0000...0xFFFE, 0xFFFF for READ Temperature * 10 +1000 
+ 
+0x12: Hysteresis 
+Possible values for yy: 0x00…0x0F (Source) up to 16 entries (Source) 
+Possible values for zz zz: 0x0000...0xFFFE, 0xFFFF for READ Hysteresis*10 
+ 
+===== page 7 =====
+ 
+ 
+Communication interface 
+   
+ 
+   
+CT 4M commands_2024-03-A  7 
+ 
+Optris GmbH 
+Ferdinand-Buisson-Str. 14  
+13127 Berlin Tel. +49 (0)30 500 197-0 info@optris.com 
+Germany Fax +49 (0)30 500 197-10 www.optris.com 
+0x13: normally open / closed 
+Possible values for yy: 0x00…0x0F (Source) up to 16 entries (Source) 
+Possible values for zz zz: 0x0000...0x0001, 0xFFFF for READ zz zz = 0x0000 - normal 
+open, 0x0001 - normal 
+closed 
+ 
+0x14: normally / differential 
+Possible values for yy: 0x00…0x0F (Source) up to 16 entries (Source) 
+Possible values for zz zz: 0x0000...0x0001, 0xFFFF for READ zz zz = 0x0000 - normal, 
+0x0001 - differential 
+ 
+Valid low values: 
+0x20: Threshold 
+Possible values for yy: 0x00  
+Possible values for zz zz: 0…10000, 0xFFFF for READ mV 
+ 
+0x21: Hysteresis 
+Possible values for yy: 0x00  
+Possible values for zz zz: 0x0000...0xFFFE, 0xFFFF for READ Hysteresis*10 
+ 
+Valid high value: 
+0x30: Threshold 
+Possible values for yy: 0x00  
+Possible values for zz zz: 0…10000, 0xFFFF for READ mV 
+ 
+0x31: Hysteresis 
+Possible values for yy: 0x00  
+Possible values for zz zz: 0x0000...0xFFFE, 0xFFFF for READ Hysteresis*10 
+ 
+Hold LoHi value: 
+0x40: Threshold 
+Possible values for yy: 0x00  
+Possible values for zz zz: 0…10000, 0xFFFF for READ mV 
+ 
+0x41: Hysteresis 
+Possible values for yy: 0x00  
+Possible values for zz zz: 0x0000...0xFFFE, 0xFFFF for READ Hysteresis*10 
+ 
+Hold HiLo value: 
+0x50: Threshold 
+Possible values for yy: 0x00  
+Possible values for zz zz: 0…10000, 0xFFFF for READ mV 
+ 
+0x51: Hysteresis 
+Possible values for yy: 0x00  
+Possible values for zz zz: 0x0000...0xFFFE, 0xFFFF for READ Hysteresis*10 
+ 
+Hold Reset low value: 
+0x60: Threshold 
+Possible values for yy: 0x00  
+Possible values for zz zz: 0…10000, 0xFFFF for READ mV 
+ 
+0x61: Hysteresis 
+Possible values for yy: 0x00  
+Possible values for zz zz: 0x0000...0xFFFE, 0xFFFF for READ Hysteresis*10 
+===== page 8 =====
+ 
+ 
+Communication interface 
+   
+ 
+   
+CT 4M commands_2024-03-A  8 
+ 
+Optris GmbH 
+Ferdinand-Buisson-Str. 14  
+13127 Berlin Tel. +49 (0)30 500 197-0 info@optris.com 
+Germany Fax +49 (0)30 500 197-10 www.optris.com 
+Hold Reset high value: 
+0x70: Threshold 
+Possible values for yy: 0x00  
+Possible values for zz zz: 0…10000, 0xFFFF for READ mV 
+ 
+0x71: Hysteresis 
+Possible values for yy: 0x00  
+Possible values for zz zz: 0x0000...0xFFFE, 0xFFFF for READ Hysteresis*10 
+ 
+Analog Emissivity: 
+0x90: mV bottom 
+Possible values for yy: 0x00  
+Possible values for zz zz: 0…10000, 0xFFFF for READ mV 
+ 
+0x91: mV top 
+Possible values for yy: 0x00  
+Possible values for zz zz: 0…10000, 0xFFFF for READ mV 
+ 
+0x92: Eps bottom 
+Possible values for yy: 0x00  
+Possible values for zz zz: 0…10000, 0xFFFF for READ Eps * 1000 
+ 
+0x93: Eps top 
+Possible values for yy: 0x00  
+Possible values for zz zz: 0…10000, 0xFFFF for READ Eps * 1000 
+ 
+Analog Ambient: 
+0x94: mV bottom 
+Possible values for yy: 0x00  
+Possible values for zz zz: 0…10000, 0xFFFF for READ mV 
+ 
+0x95: mV top 
+Possible values for yy: 0x00  
+Possible values for zz zz: 0…10000, 0xFFFF for READ mV 
+ 
+0x96: Ambient bottom 
+Possible values for yy: 0x00  
+Possible values for zz zz: 0…10000, 0xFFFF for READ Ambient * 1000 
+ 
+0x97: Ambient top 
+Possible values for yy: 0x00  
+Possible values for zz zz: 0…10000, 0xFFFF for READ Ambient * 1000 
+ 
+Analog Transmitted Radiation: 
+0x98: mV bottom 
+Possible values for yy: 0x00  
+Possible values for zz zz: 0…10000, 0xFFFF for READ mV 
+ 
+0x99: mV top 
+Possible values for yy: 0x00  
+Possible values for zz zz: 0…10000, 0xFFFF for READ mV 
+ 
+0x9A: Transmitted Radiation bottom 
+Possible values for yy: 0x00  
+Possible values for zz zz: 0…10000, 0xFFFF for READ Transmitted Radiation * 1000 
+===== page 9 =====
+ 
+ 
+Communication interface 
+   
+ 
+   
+CT 4M commands_2024-03-A  9 
+ 
+Optris GmbH 
+Ferdinand-Buisson-Str. 14  
+13127 Berlin Tel. +49 (0)30 500 197-0 info@optris.com 
+Germany Fax +49 (0)30 500 197-10 www.optris.com 
+0x9B: Transmitted Radiation top 
+Possible values for yy: 0x00  
+Possible values for zz zz: 0…10000, 0xFFFF for READ Transmitted Radiation * 1000 
+ 
+Analog Uncommitted Value: 
+0xA0: mV bottom 
+Possible values for yy: 0x00  
+Possible values for zz zz: 0…10000, 0xFFFF for READ mV 
+ 
+0xA1: mV top 
+Possible values for yy: 0x00  
+Possible values for zz zz: 0…10000, 0xFFFF for READ mV 
+ 
+0xA2: Uncommitted Value bottom 
+Possible values for yy: 0x00  
+Possible values for zz zz: 0…10000, 0xFFFF for READ Uncommitted Value * 1000 
+ 
+0xA3: Uncommitted Value top 
+Possible values for yy: 0x00  
+Possible values for zz zz: 0…10000, 0xFFFF for READ Uncommitted Value * 1000 
+ 
+ 
+0xB0: Laser On Low Threshold 
+0xB1: Laser On Low Hysteresis 
+ 
+0xC0: Laser On High Threshold 
+0xC1: Laser On High Hysteresis 
+ 
+ 
+3.1.3 Description AL2 Values READ / SET (all bytes in HEX): 
+Send for READ:  12 xx FF FF, SET: 12 xx yy yy 
+Possible values for xx:  
+0x00 - Source 
+   0000 - Temp Process 
+   0001 - Temp Head 
+   0002 - Temp Electronic 
+0x01 - Threshhold 
+   yy yy - Temperatur 
+0x02 - Hysteresis 
+   yy yy - Temperature 
+0x03 - Alarm N.O. / N.C. 
+   0000 = normally open 
+   0001 = normally close 
+0x04 - Alarm Difference Mode 
+   0000 = inactive  
+   0001 = active  
+===== page 10 =====
+ 
+ 
+Communication interface 
+   
+ 
+   
+CT 4M commands_2024-03-A  10 
+ 
+Optris GmbH 
+Ferdinand-Buisson-Str. 14  
+13127 Berlin Tel. +49 (0)30 500 197-0 info@optris.com 
+Germany Fax +49 (0)30 500 197-10 www.optris.com 
+4 Visual Alarm Settings and Display 
+The optris CT 4M has up to 8 adjustable color ranges. 
+ 
+DECIMAL HEX Command Data Answer Result 
+110 0x6E READ / SET Visual Alarm 
+Entry 
+byte1 to byte7 byte1 to byte7 See Visual Alarm Entries 
+111 0x6F READ / SET Visual Alarm 
+Value 
+byte1 byte2 byte3 byte1 byte2 See Visual Alarm Values 
+ 
+4.1.1 Description Visual Alarm Entries READ / SET (all bytes in HEX) 
+6E xx yy uu uu vv vv ww 
+ 
+Possible values for xx (Source): 
+00: Temp Process 
+01: Temp Int 
+02: Temp Box 
+ 
+Possible values for yy (Entry): 00 - 07 
+uu uu below value (FF FF for READ) 
+vv vv above value (FF FF for READ) 
+ww LEDs (Combination of: 01 - Red, 02 - Green, 04 - Blue, FF for READ) 
+ 
+ 
+4.1.2 Description Visual Alarm Value READ / SET (all bytes in HEX) 
+6F xx yy yy 
+ 
+Possible values for xx (Value Index): 
+00 Source 0-Temp Process, 1-Temp Int, 2-Temp Box 
+01 Mode 1-normal, 0-advanced 
+02 Low Alarm  
+03 High Alarm  
+04 Hysteresis  
+05 Low Alarm normally closed 0-off, 1-on 
+06 High Alarm normally closed 0-off, 1-on 
+ 
+ 
+===== page 11 =====
+ 
+ 
+Communication interface 
+   
+ 
+   
+CT 4M commands_2024-03-A  11 
+ 
+Optris GmbH 
+Ferdinand-Buisson-Str. 14  
+13127 Berlin Tel. +49 (0)30 500 197-0 info@optris.com 
+Germany Fax +49 (0)30 500 197-10 www.optris.com 
+5 Advanced Settings 
+5.1 Sensor Information/ Calibration 
+With the user offset function, the sensor can be linear recalibrated. 
+ 
+DECIMAL HEX Command Data Answer Result 
+14 0x0E READ Serial 
+number 
+none byte1 byte2 byte3, 
+byte 4 
+=byte1*224 + byte2*216 + byte3*28 + byte4 
+15 0x0F READ FW Rev. none byte1 byte2 =byte1*256 + byte2 
+24 0x18 READ / SET 
+User Offset 
+byte1 byte2 
+byte 3 
+byte1 byte2 See User Offset Value 
+25 0x19 READ /SET 
+User Gain 
+byte1 byte2 
+byte 3 
+byte1 byte2 See User Gain Value 
+69 0x45 READ Model 
+Information 
+byte1 byte1…byteX See Model Information 
+ 
+5.1.1 Description User Offset Value READ / SET (all bytes in HEX) 
+Send for READ: 18 FF FF, SET: 18 yy yy 
+ 
+Possible values for yyyy: 0...2000 0 = -100.0 °C; 1000 = 0 °C; 2000 = 100 °C 
+ 
+5.1.2 Description User Gain Value READ / SET (all bytes in HEX) 
+Send for READ: 19 FF F, SET: 19 yy yy 
+ 
+Possible values for yyyy: 0...65535 Factor = yyyy / 215 
+ 
+5.1.3 Description Model Information READ value: (all bytes in HEX) 
+Send for READ: 45 xx 
+ 
+Possible values for xx: 
+00: Block 0 yy yy = 0 - Fix, 1 - Internal temperature 
+01 Block 1 yy yy = Temp.*10+1000 
+ 
+Answer: XX = 0: 30 Byte, XX = 1: 24 Source = yy yy = 0 - Fix, 1 - Internal temperature 
+     Temp. = (yy yy → Decimal) /10 - 100 
+ 
+Block 0: Block 1: 
+Byte0 Byte1 Model word (Optris internal) Byte0...Byte7 Model String 1 
+Byte2 Byte3 ModelFlags1 (Optris internal) Byte8...Byte15 Model String 2 
+Byte4 Byte5 ModelFlags2 (Optris internal) Byte16…Byte23 Model String 3 
+Byte6 Byte7 ModelFlags3 (Optris internal)   
+Byte8 Byte9 ModelFlags4 (Optris internal)   
+Byte10 Byte11 Temp Int min   
+Byte12 Byte13 Temp Int max   
+Byte18 Byte19 Temp Bot min   
+Byte20 Byte21 Temp Top min   
+Byte18…Byte29 0   
+===== page 12 =====
+ 
+ 
+Communication interface 
+   
+ 
+   
+CT 4M commands_2024-03-A  12 
+ 
+Optris GmbH 
+Ferdinand-Buisson-Str. 14  
+13127 Berlin Tel. +49 (0)30 500 197-0 info@optris.com 
+Germany Fax +49 (0)30 500 197-10 www.optris.com 
+5.2 Advanced IR-Settings 
+DECIMAL HEX Command Data Answer Result 
+19 0x13 READ / SET Amb. Temp. byte1 byte2 byte3 byte1 byte2 See Ambient Values 
+20 0x14 READ Amb. Temp. Fix 
+Value 
+none byte1 byte2 = (byte1*256 + byte2 - 1000) / 10 
+ 
+ 
+5.2.1 Description Ambient Values READ / SET (all bytes in HEX) 
+Send for READ: 13 xx FF FF, SET: 13 xx yy yy 
+ 
+Possible values for xx: 
+00 Ambient Source yy yy = 0 - Fix, 1 – Internal temp, 2 - mV Input 
+01 Ambient Temp yy yy = Temp.*10+1000 
+ 
+Answer: yy yy Source = yy yy = 0 - Fix, 1 - Internal temp. 
+ Temp. = (yy yy → Decimal) /10 - 100 
+ 
+ 
+5.3 Advanced Digital Communication Settings 
+DECIMAL HEX Command Data Answer Result 
+16 0x10 READ / SET 
+Multidrop Address 
+byte1 byte1 = byte1 (1…79), 0xFF for READ,  
+0 = RS422 
+45 0x2D READ / SET check 
+sum 
+byte1 byte1 = ON if byte1 = 1, OFF if byte1 = 0, 
+for READ byte1 = 0xFF 
+81 0x51 Read /Set Burst 
+Value 
+byte1 to byte16 byte1 to byte16 See Burst Value 
+82 0x52 Set Burst Mode byte1 byte2 byte3 byte1 byte2 byte3 Byte1 = Mode (1 = start, 0 = stop) 
+Byte2*256 + byte3 = interval in ms 
+83 0x53 READ single Burst  byte1 to byteN  
+ 
+ 
+5.3.1 Description Burst-Value READ / SET (all bytes in HEX) 
+51 yy yy yy yy yy yy yy yy yy yy yy yy yy yy yy yy 
+ 
+Possible values for yy: (16x) 
+00: Burst end 0B mV I/O3 
+01: Target Avg 0C Ambient 
+02: Target Act 0D Transmitted Radiation 
+03: Int 0E Uncommitted Value 
+04: Box FF for READ 
+05: Epsilon   
+06: Transmission   
+07 Process Avg   
+08 Process Act   
+09 mV I/O1   
+0A mV I/O2   
+ 
+ 
+===== page 13 =====
+ 
+ 
+Communication interface 
+   
+ 
+   
+CT 4M commands_2024-03-A  13 
+ 
+Optris GmbH 
+Ferdinand-Buisson-Str. 14  
+13127 Berlin Tel. +49 (0)30 500 197-0 info@optris.com 
+Germany Fax +49 (0)30 500 197-10 www.optris.com 
+Examples: 
+ 
+Set Burst string to Target Avg (01), Target Act (02), Int (03), Box (04) and Process Act (08), SEND:  
+Byte 
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 
+51 01 02 03 04 08 00 00 00 00 00 00 00 00 00 00 5D 
+CMD                Check 
+sum 
+ 
+Start Burst mode in 100 ms (100 ms → 0064HEX), SEND: 
+Byte1 Byte2 Byte3 Byte4 Byte5 
+52 01 00 64 37 
+Command Index Value Value Checksum 
+ 
+Stop Burst mode, SET: 
+Byte1 Byte2 Byte3 Byte4 Byte5 
+52 00 00 00 52 
+Command Index Value Value Checksum 
+ 
+ 
+5.4 Loop Maintenance 
+In order to  simulate hot objects in the scene and double check the analog circuits the loop maintenance 
+makes the analog output sending fixed values.  Note: It is necessary to reset DAC percentage to get back 
+to measure mode. 
+ 
+DECIMAL HEX Command Data Answer Result 
+143 0x8F SET DAC percentage output / mA Byte1 byte2 
+byte3 
+Byte1 byte2 See Loop Maintenance 
+ 
+ 
+5.4.1 Description SET Output mA/mV (all bytes in HEX) 
+8F xx yy yy 
+ 
+Possible values for xx (Outgoing No.): 00, 01 
+ 
+Possible values for yy: 
+Value in 0.1 mA / 0,1 mV 
+ 
+ 
+5.5 Further Advanced Settings 
+DECIMAL HEX Command Data Answer Result 
+169 0xA9 SET DEFAULT FACTDEFAULT byte1 0 – not set 
+1 - set 
+67 0x43 READ / SET Panel 
+lock 
+byte1 byte1 = ON if byte1 = 1, OFF if byte1 = 0, for 
+READ byte1 = 0xFF 
+9 0x09 READ / SET Temp. 
+Unit 
+byte1 byte1 °C if byte1 = 1 
+°F if byte1 = 0 
+(for READ use FF) 
+===== page 14 =====
+ 
+ 
+Communication interface 
+   
+ 
+   
+CT 4M commands_2024-03-A  14 
+ 
+Optris GmbH 
+Ferdinand-Buisson-Str. 14  
+13127 Berlin Tel. +49 (0)30 500 197-0 info@optris.com 
+Germany Fax +49 (0)30 500 197-10 www.optris.com 
+6 Contact information 
+If you plan your own software  to query and control the optris  CT 4M sensor and you have further questions , please 
+contact: 
+ 
+Optris GmbH 
+Ferdinand-Buisson-Str. 14 
+13127 Berlin 
+Germany 
+ 
+Tel.: +49 30 500197-0 
+Fax.: +49 30 500197-10 
+ 
+email: info@optris.global 
+web: www.optris.global 
