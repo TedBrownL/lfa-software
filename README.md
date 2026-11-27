@@ -158,6 +158,40 @@ python tools\bench_ui_frames.py 8
 **回归测试**：`tools/test_no_gap.py` 在 10/30/60 s 与全览四种跨度下各检查
 250 帧，左空白均为 0.00 ms。
 
+## 版本管理
+
+代码托管在 **https://github.com/TedBrownL/lfa-software**（公开仓库），
+分支 `main`，此后所有改动都走 git 版本管理。
+
+```bat
+REM 查看改了什么
+git status
+git diff
+
+REM 提交并推送
+git add -A
+git commit -m "feat: 说明改了什么"
+git push
+```
+
+**入库范围**（`.gitignore` 控制）：
+
+| 内容 | 是否入库 | 理由 |
+|---|---|---|
+| `lfa/`、`tools/`、`solenoid/` 源码 | 是 | 核心代码 |
+| `README.md`、项目日志、清理日志、`docs/` | 是 | 文档与协议资料 |
+| `data/result_*.zip`、`data/*.csv` | **否** | 实验产物，体积大且随实验增长 |
+| `__pycache__/`、`*.pyc` | 否 | 缓存 |
+| `solenoid/firmware/_build/` | 否 | 编译产物 |
+
+新克隆后 `data/` 目录不存在也没关系，导出时代码会自行 `makedirs`。
+
+**换行约定**（`.gitattributes`）：源码与 Markdown 在仓库内存 **LF**，
+`*.bat` 检出为 **CRLF**（Windows cmd 不吃纯 LF 的批处理）。
+
+> 提交前请确认没把 `data/` 里的实验数据带进来（`git status` 里不该出现
+> `result_*.zip`）。
+
 ## 下一步
 
 * [ ] 激光触发通道：波形发生器/示波器的同步信号接入（USB-GPIO 或示波器
